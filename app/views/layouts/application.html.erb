@@ -2,10 +2,22 @@
 <html>
 <head>
   <title>WeddingSiteApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
+<nav>
+	<ul id="nav">
+		<li><%= link_to "Jaclyn + Pablo", root_path %></li>
+		<li><%= link_to "Our Story", story_index_path %></li>
+		<li><%= link_to "When & Where", where_index_path %></li>
+		<li><%= link_to "Registry", registry_index_path %></li>
+		<li><%= link_to "Playlist", new_playlist_path %></li>
+	</ul>
+</nav>
+
 <body>
 
 <%= yield %>
