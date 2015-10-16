@@ -1,4 +1,22 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+.playlist-style {
+	background: url("pablo026.jpg") no-repeat center center fixed;
+	background-size: 100% 100%;
+	padding: 1em;
+	color: white;
+	font-size: 20px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.space {
+	padding: 5px;
+}
+
+.submit-button {
+	font-size: 18px;
+	background-color: #22313F;
+	font-family: 'Cabin', sans-serif;
+	width: 100px;
+	margin-left: 490px;
+	padding: 5px;
+}

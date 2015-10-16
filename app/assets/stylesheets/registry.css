@@ -4,9 +4,13 @@
 	width: 90%;
 	margin-left: 5px;
 	margin-right: 5px;
-	background-color: #3A539B;
+	background-color: #22313F;
 	color: white;
 	margin-bottom: 20px;
+}
+
+.registry-title {
+	font-size: 30px;
 }
 
 .photo-style {
@@ -21,14 +25,23 @@
 	font-size: 18px;
 }
 
+/*.registry-background {
+	background-color: #ECF0F1;
+}
+*/
+
+.gift-border {
+	outline: 1px solid gray;
+}
+
 button {
 	padding: 5px;
 	width: 180px;
-	margin-bottom: 10px;
+	margin-left: 20px;
 	/*font styling*/
 	font-size: 1em;
 	letter-spacing: 1px;
-	color: #2c3e50;
+	color: #22313F;
 	/*rounded edges*/
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
