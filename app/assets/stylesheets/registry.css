@@ -1,4 +1,28 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+
+.friendship {
+	border: 1px solid gray;
+	width: 90%;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: #34495e;
+	color: white;
+	margin-bottom: 20px;
+}
+
+button {
+	padding: 5px;
+	width: 180px;
+	margin-bottom: 10px;
+	/*font styling*/
+	font-size: 1em;
+	letter-spacing: 1px;
+	color: #2c3e50;
+	/*rounded edges*/
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.contribute-button {
+	/*mostly for grabbing*/
+}
