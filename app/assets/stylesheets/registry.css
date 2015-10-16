@@ -4,9 +4,21 @@
 	width: 90%;
 	margin-left: 5px;
 	margin-right: 5px;
-	background-color: #34495e;
+	background-color: #3A539B;
 	color: white;
 	margin-bottom: 20px;
+}
+
+.photo-style {
+	padding: 10px;
+}
+
+.cost {
+	font-size: 25px;
+}
+
+.multiplier {
+	font-size: 18px;
 }
 
 button {
@@ -25,4 +37,17 @@ button {
 
 .contribute-button {
 	/*mostly for grabbing*/
+}
+
+.registry-buttons {
+	height: 110px;
+	width: 120px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.registry-header {
+	text-align: left;
+	margin-left: 5px;
+	margin-right: 20px;
 }
