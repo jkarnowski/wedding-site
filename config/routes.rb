@@ -1,21 +1,18 @@
 Rails.application.routes.draw do
-  get 'playlists/index'
+  
+  get 'welcome/index'
+  get 'registry/index'
+  get 'story/index'
+  get 'where/index'
 
-  get 'playlists/new'
-
-  get 'playlists/show'
-
-  get 'users/index'
-
-  get 'users/new'
-
-  get 'users/show'
+  
+  resources :playlists
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
