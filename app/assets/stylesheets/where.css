@@ -4,10 +4,10 @@
 */
 
 #boat {
-	width: 90%;
-	padding-top: 20px;
+	width: 80%;
+	padding-top: 10px;
 	margin-left: 10px;
-	/*position: absolute;*/
+	margin-bottom: 10px;
 }
 
 #googleMap {
@@ -27,4 +27,13 @@
 #hotel {
 	width: 80%;
 	height: 90%;
+}
+
+.boat-border {
+	/*outline: 1px solid gray;*/
+	background-color: #cccccc;
+	padding: 10px;
+	margin-bottom: 10px	;
+	margin-left: 10px;
+	margin-right: 10px;
 }

@@ -2,9 +2,9 @@
 .friendship {
 	border: 1px solid gray;
 	width: 90%;
-	margin-left: 5px;
+	margin-left: 3px;
 	margin-right: 5px;
-	background-color: #22313F;
+	background-color: #67809F;
 	color: white;
 	margin-bottom: 20px;
 }
@@ -32,14 +32,15 @@
 
 .gift-border {
 	outline: 1px solid gray;
+	margin-bottom: 10px;
 }
 
 button {
-	padding: 5px;
+	padding: 10px;
 	width: 180px;
 	margin-left: 20px;
 	/*font styling*/
-	font-size: 1em;
+	font-size: 15px;
 	letter-spacing: 1px;
 	color: #22313F;
 	/*rounded edges*/

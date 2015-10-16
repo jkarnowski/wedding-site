@@ -7,3 +7,10 @@
 	background-image: url('pablo186.jpg');
 	background-size: cover;
 }
+
+.date {
+	font-size: 70px;
+	color: #EEEEEE;
+  font-family: 'Nixie One', cursive;
+  letter-spacing: 2px;
+}
