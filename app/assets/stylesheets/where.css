@@ -2,3 +2,29 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+
+#boat {
+	width: 90%;
+	padding-top: 20px;
+	margin-left: 10px;
+	/*position: absolute;*/
+}
+
+#googleMap {
+	width: 90%;
+	height: 410px;
+	margin-left: 40px;
+	margin-top: 10px;
+	margin-bottom: 10px;	
+}
+
+.map-size {
+	margin: 0 auto;
+	display: inline-block;
+	float: left;
+}
+
+#hotel {
+	width: 80%;
+	height: 90%;
+}
