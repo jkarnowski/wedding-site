@@ -2,3 +2,41 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+
+.carousel-inner > .item > img,
+	.carousel-inner > .item > a > img {
+      width: 75%;
+      height: 80%;
+      margin: auto;
+}
+
+.item {
+	height: 80%;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.title-padding {
+	padding-top: 40px;
+}
+
+#engagement-photos {
+	line-height: 0;
+	margin: 10px 10px;
+   
+  -webkit-column-count: 5;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    5;
+  -moz-column-gap:      0px;
+  column-count:         5;
+  column-gap:           0px;
+}
+
+#engagement-photos img {
+	width: 100% !important;
+	height: auto !important;
+}
+
+.txt-center {
+	text-align: center;
+}
