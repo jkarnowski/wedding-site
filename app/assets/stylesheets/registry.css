@@ -1,16 +1,21 @@
 
 .friendship {
-	border: 1px solid gray;
 	width: 100%;
-	margin-left: 3px;
-	margin-right: 5px;
-	background-color: #67809F;
-	color: white;
+	margin: 0 auto;
+	background-color: #6BB9F0;
+	color: #22313F;
 	margin-bottom: 20px;
+}
+
+.explanation-txt {
+	font-family: 'Cabin', sans-serif;
+	font-size: 15px;
+	padding: 1em;
 }
 
 .registry-title {
 	font-size: 30px;
+	padding: 10px;
 }
 
 .photo-style {
@@ -61,8 +66,14 @@ button {
 	margin-bottom: 5px;
 }
 
+.registry-box-align {
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
 .registry-header {
 	text-align: center;
 	/*margin-left: 5px;*/
 	margin-right: 40px;
+	padding: 1em;
 }

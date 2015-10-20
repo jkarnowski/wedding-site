@@ -7,7 +7,11 @@
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
+          data-description="gift"
           data-amount="500"
           data-locale="auto"></script>
 <% end %>
+
+<!-- OR script option: -->
+<!-- %script.stripe-button{ src: "https://checkout.stripe.com/checkout.js",
+              data: {amount: @course.price*100, description: @course.name, key: Rails.application.secrets.stripe_publishable_key}}  -->

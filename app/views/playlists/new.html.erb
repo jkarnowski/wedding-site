@@ -14,17 +14,17 @@
 		<%= form_for :playlist, :url =>url_for(controller: 'playlists', action: 'create'), :html => {:method => :post} do |f| %>
 		<p class="space">
 			<%= f.label :song_one %><br>
-			<%= f.text_field :song_one %>
+			<%= f.text_field :song %>
 		</p>
 
 		<p class="space">
 			<%= f.label :song_two %><br>
-			<%= f.text_field :song_two %>
+			<%= f.text_field :song %>
 		</p>
 
 		<p class="space">
 			<%= f.label :song_three %><br>
-			<%= f.text_field :song_three %>
+			<%= f.text_field :song%>
 		</p>
 
 		<%= f.submit "Submit", class: "submit-button" %>
