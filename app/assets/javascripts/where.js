@@ -4,6 +4,7 @@
 $(document).on('ready', function(){
 	console.log("inside the where")
 	showMap();
+	
 })
 
 var showMap = function(){
