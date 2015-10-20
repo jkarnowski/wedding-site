@@ -3,19 +3,17 @@
   They will automatically be included in application.css.
 */
 
-#boat {
-	width: 80%;
-	padding-top: 10px;
-	margin-left: 10px;
-	margin-bottom: 10px;
-}
-
 #googleMap {
 	width: 90%;
 	height: 410px;
 	margin-left: 40px;
 	margin-top: 10px;
 	margin-bottom: 10px;	
+}
+
+.location-title {
+	margin-top: 60px;
+	text-align: center;
 }
 
 .map-size {

@@ -1,3 +1,5 @@
+<%= render 'playlists/navigation_not_root' %>
+
 <div class="container">
 	<div class="row debug">
 		<div class="col span-12-d debug">
@@ -37,7 +39,12 @@
 				<div class="col span-3-d debug">
 					<p class="cost">$100.00</p>
 					<p class="multiplier">* 40</p>
-					<button class="contribute-button">Contribute</button>
+					<button class="contribute-button">Contribute</button><form action="" method="POST">
+						<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_UlUbDYdUkO0qkJ2r1Iw3DYtZ" data-amount="2000" data-name="Demo Site" data-description="2 widgets ($20.00)" data-image="/128x128.png"data-locale="auto"></script>
+</form>
+
+
+
 				</div>
 			</div>
 		</div>
