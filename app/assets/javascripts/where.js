@@ -21,6 +21,6 @@ var showMap = function(){
 	var marker = new google.maps.Marker({
 		position: myLatLng,
     map: map,
-    title: 'Wedding Spot'
+    title: 'Hotel + Docks'
   	});
 }

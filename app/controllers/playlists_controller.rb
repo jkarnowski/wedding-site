@@ -12,7 +12,9 @@ class PlaylistsController < ApplicationController
 
   def create
   	Playlist.create(playlist_params)
-  	redirect_to playlists_path
+
+    flash[:notice] = "You successfully submitted your songs to our playlist!"
+  	redirect_to root_path
   end
 
 
