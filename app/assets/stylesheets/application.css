@@ -21,7 +21,7 @@
 /*COLOR COMBOS*/
 /* DARK BLUE #22313F*/ 
 /*LIGHT BLUE #6BB9F0 */
-/*ORANGE #16a085 */
+/*ORANGE #F89406 */
 
 /*NAV Colors*/
 /*DARK: #2C3E50*/
@@ -183,35 +183,36 @@ html {
 }
 
 /*navbar for welcome page*/
-nav .nav {
+nav ul .nav {
 	width: 100%;
 	height: 1em;
 	margin: 0 0 50px 0;
 	padding: 1em;
 }
 
-nav .nav ul {
+nav ul .nav {
 	list-style: none;
     margin: 0 auto;
     padding: 0;
 }
 
-nav .nav li {
+nav ul.nav li {
 	display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
+    color: red;
 }
 
-nav .nav a:link, a:visited {
-    width: 120px;
-    color: white;
+nav ul.nav li a:link, a:visited {
     font-weight: bold;
+    color: white;
+    text-align: center;
     font-family: 'Raleway', sans-serif;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
+    text-decoration: none;
+    text-transform: uppercase;
+    
 }
 
-nav .nav a:hover, a:active {
+nav ul.nav li a:hover, a:active {
     background-color: transparent;
     color: #22313F;
 }
@@ -220,7 +221,7 @@ nav .nav a:hover, a:active {
 
 /*nav bar for all other pages*/
 
-nav .nav-2 {
+nav ul.nav-2 {
     width: 100%;
     height: 2em;
     margin: 0 0 1em 0;
@@ -228,19 +229,19 @@ nav .nav-2 {
     background-color: #22A7F0;
 }
 
-/*nav .nav-2 ul {
+/*nav ul.nav-2 ul {
     list-style: none;
     width: 100%;
     margin: 0 auto;
     padding: 0;
 }*/
 
-nav .nav-2 li {
+nav ul.nav-2 li {
     display: inline-block;
     font-family: 'Raleway', sans-serif;
 }
 
-nav .nav-2 a:link, a:visited {
+nav ul.nav-2 a:link, a:visited {
     width: 120px;
     font-weight: bold;
     text-align: center;
@@ -250,12 +251,24 @@ nav .nav-2 a:link, a:visited {
     text-transform: uppercase;
 }
 
-nav a:hover, a:active {
+
+nav ul.nav-2 a:hover, a:active {
     color: #22313F;
     background-color: transparent;
 }
 
 /**/
+
+#linksss a:link, #linksss a:visited {
+    color: #6BB9F0;
+    text-decoration: none;    
+}
+
+#linksss a:hover, #linksss a:active {
+    background-color: transparent;
+    text-decoration: none;
+    color: #22313F;
+}
 
 
 h1, h2, h3, h4, h5 {
