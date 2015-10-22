@@ -1,8 +1,10 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
-$(document).ready(function(){
+$(document).on('ready', function(){
+	console.log("inside the where")
 	showMap();
+	
 })
 
 var showMap = function(){
@@ -19,6 +21,6 @@ var showMap = function(){
 	var marker = new google.maps.Marker({
 		position: myLatLng,
     map: map,
-    title: 'Wedding Spot'
+    title: 'Hotel + Docks'
   	});
 }

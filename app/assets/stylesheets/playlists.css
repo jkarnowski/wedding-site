@@ -1,4 +1,37 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+
+
+.playlist-style {
+	background: url("pablo026.jpg") no-repeat center center fixed;
+	background-size: 100% 100%;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.label {
+	font-size: 24px;
+	padding: 1em;
+	color: #eeeeee;
+  font-family: 'Nixie One', cursive;
+}
+
+.input-txt {
+	color: #22313F;
+	padding: 5px;
+	font-family: 'Cabin', sans-serif;
+	text-align: center;
+}
+
+.space {
+	padding: 1em;
+}
+
+.submit-button {
+	font-size: 18px;
+	background-color: #22313F;
+	font-family: 'Cabin', sans-serif;
+	width: 100px;
+	color: #eeeeee;
+	margin-left: 510px;
+	margin-bottom: 10px;
+	padding: 5px;
+}

@@ -1,29 +1,27 @@
-<div class="debug container">
-	<div class="debug row">
-		<div class="col span-8-d">
-			<img id="boat" src="http://static.wixstatic.com/media/8b839b_4264a910fd0243a59a917fd68099dc54.jpg_srb_p_1176_566_75_22_0.50_1.20_0.00_jpg_srb" alt="" />
-		</div>
+<%= render 'playlists/navigation_not_root' %>
 
-		<div class="col span-4-d">
-			<h4>CEREMONY + RECEPTION</h4>
-			<h4>SATURDAY, MARCH 12, 2016</h4>
-			<h4>GALLERYone, DoubleTree Hotel</h4>
-			<p>2670 East Sunrise Blvd</p>
-			<p>Fort Lauderdale, Florida</p><br>
-			<p>adults only</p>
-			<p>Boarding begins at 5:15pm | Cruise + celebrate 5:30pm - 9:30pm</p>
-			<p>AFTER PARTY continues at GalleryOne Double Tree Hotel</p>
-		</div>
-	</div> <!-- close-row -->
-
+<div class="container">
 	<div class="row">
-		<div class="col span-4-d">
-			<h3>ACCOMODATIONS</h3>
-			<p>Limited room blocks at <a href="http://doubletree3.hilton.com/en/hotels/florida/galleryone-a-doubletree-suites-by-hilton-hotel-FLLTSDT/index.html" target="_blank">GALLERYone Double Tree Hotel</a></p>
-			<p>Mention Jaclyn Karnowski + Pablo Perez</p>
-		</div>
 		<div class="col span-8-d">
 			<div id="googleMap" class="map-size"></div>
 		</div>
+
+		<div class="col span-4-d">
+			<h4 class="ceremony">CEREMONY + RECEPTION</h4>
+				<h5>SATURDAY, MARCH 12, 2016</h5>
+				<h5>GALLERYone, DoubleTree Hotel</h5>
+				<p class="location-info">2670 East Sunrise Blvd</p>
+				<p class="location-info">Fort Lauderdale, Florida</p><br>
+				<p id="adults">adults only</p>
+				<p class="party">Boarding begins at <span class="time">5:15pm</span></p>
+				<p class="party">Cruise + celebrate <span class="time">5:30pm - 9:30pm</span></p>
+				<p class="location-info">AFTER PARTY continues at GalleryOne Double Tree Hotel</p>
+			
+			<h4 class="lodging">ACCOMODATIONS</h4>
+			<p class="party">Limited room blocks at <span id="linksss"><a href="http://doubletree3.hilton.com/en/hotels/florida/galleryone-a-doubletree-suites-by-hilton-hotel-FLLTSDT/index.html" target="_blank">GALLERYone Double Tree</a></span></p>
+			<p class="party">Mention Jaclyn Karnowski + Pablo Perez</p>
+		</div>
 	</div>
-</div> <!-- close-container -->
+</div>
+
+

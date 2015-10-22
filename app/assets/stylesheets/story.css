@@ -16,13 +16,9 @@
 	margin: 0 auto;
 }
 
-.title-padding {
-	padding-top: 40px;
-}
-
 #engagement-photos {
 	line-height: 0;
-	margin: 10px 10px;
+	margin: 20px 30px;
    
   -webkit-column-count: 5;
   -webkit-column-gap:   0px;
@@ -39,4 +35,10 @@
 
 .txt-center {
 	text-align: center;
+}
+
+.married-background {
+  background-color: #6BB9F0;
+  padding: 25px;
+  margin-bottom: 10px;
 }

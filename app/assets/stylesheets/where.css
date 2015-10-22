@@ -3,23 +3,38 @@
   They will automatically be included in application.css.
 */
 
-#boat {
-	width: 90%;
-	padding-top: 20px;
-	margin-left: 10px;
-	/*position: absolute;*/
-}
-
 #googleMap {
 	width: 90%;
 	height: 410px;
-	margin-left: 40px;
-	margin-top: 10px;
+	margin-left: 10px;
+	margin-top: 50px;
 	margin-bottom: 10px;	
 }
 
+.ceremony {
+	margin-top: 50px;
+}
+
+.location-info {
+	font-size: 11px;
+}
+
+#adults {
+	font-size: 11px;
+	font-style: italic;
+}
+
+.party {
+	font-size: 13px;
+}
+
+.time {
+	color: #F89406;
+	font-size: 20px;
+}
+
 .map-size {
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 	display: inline-block;
 	float: left;
 }
@@ -28,3 +43,18 @@
 	width: 80%;
 	height: 90%;
 }
+
+.lodging {
+	margin-top: 30px;
+}
+
+.boat-border {
+	/*outline: 1px solid gray;*/
+	background-color: #cccccc;
+	padding: 10px;
+	margin-bottom: 10px	;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/*div.container.row.col p > */

@@ -1,22 +1,53 @@
 
 .friendship {
-	border: 1px solid gray;
-	width: 90%;
-	margin-left: 5px;
-	margin-right: 5px;
-	background-color: #34495e;
-	color: white;
+	width: 100%;
+	margin: 0 auto;
+	background-color: #6BB9F0;
+	color: #22313F;
 	margin-bottom: 20px;
 }
 
-button {
-	padding: 5px;
-	width: 180px;
+.explanation-txt {
+	font-family: 'Cabin', sans-serif;
+	font-size: 15px;
+	padding: 1em;
+}
+
+.registry-title {
+	font-size: 30px;
+	padding: 10px;
+}
+
+.photo-style {
+	padding: 10px;
+}
+
+.cost {
+	font-size: 25px;
+}
+
+.multiplier {
+	font-size: 18px;
+}
+
+/*.registry-background {
+	background-color: #ECF0F1;
+}
+*/
+
+.gift-border {
+	outline: 1px solid gray;
 	margin-bottom: 10px;
+}
+
+button {
+	padding: 10px;
+	width: 180px;
+	margin-left: 20px;
 	/*font styling*/
-	font-size: 1em;
+	font-size: 15px;
 	letter-spacing: 1px;
-	color: #2c3e50;
+	color: #22313F;
 	/*rounded edges*/
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -25,4 +56,24 @@ button {
 
 .contribute-button {
 	/*mostly for grabbing*/
+}
+
+.registry-buttons {
+	height: 110px;
+	width: 120px;
+	margin-right: 10px;
+	margin-left: 40px;
+	margin-bottom: 5px;
+}
+
+.registry-box-align {
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.registry-header {
+	text-align: center;
+	/*margin-left: 5px;*/
+	margin-right: 40px;
+	padding: 1em;
 }
