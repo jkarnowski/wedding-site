@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get 'where/index'
 
   resources :playlists
-  resources :charges
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
