@@ -15,7 +15,7 @@ def create
   charge = Stripe::Charge.create(
     :customer    => customer.id,
     :amount      => @amount,
-    :description => 'Wedding Guest customer',
+    :description => 'honeymoon contribution',
     :currency    => 'usd'
   )
 
