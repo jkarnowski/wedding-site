@@ -7,7 +7,7 @@
 	margin-bottom: 20px;
 }
 
-.explanation-txt {
+.description {
 	font-family: 'Cabin', sans-serif;
 	font-size: 15px;
 	padding: 1em;
@@ -24,6 +24,7 @@
 
 .cost {
 	font-size: 25px;
+	margin-top: 20px; 
 }
 
 .multiplier {
@@ -38,24 +39,19 @@
 .gift-border {
 	outline: 1px solid gray;
 	margin-bottom: 10px;
+	margin-top: 30px;
 }
 
 button {
-	padding: 10px;
-	width: 180px;
-	margin-left: 20px;
-	/*font styling*/
-	font-size: 15px;
+	font-size: 22px;
+	text-align: center;
+	background-color: #22313F;
+	margin-left: 50px;
 	letter-spacing: 1px;
-	color: #22313F;
-	/*rounded edges*/
+	color: white;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
-}
-
-.contribute-button {
-	/*mostly for grabbing*/
 }
 
 .registry-buttons {

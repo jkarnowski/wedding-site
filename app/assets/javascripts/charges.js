@@ -1,34 +1,153 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 $(document).on('ready', function(){
-	console.log('inside the charges')
+	$(document).ready(function() {
+    // Change the key to your one
+    Stripe.setPublishableKey('pk_test_UlUbDYdUkO0qkJ2r1Iw3DYtZ');
 
-	var handler = StripeCheckout.configure({
-		key: 'pk_test_UlUbDYdUkO0qkJ2r1Iw3DYtZ',
-		locale: 'auto',
-		token: function(token) {
-		// Use the token to create the charge with a server-side script.
-	  // You can access the token ID with `token.id`
-		}
-	});
+    $('#paymentForm')
+        .formValidation({
+            framework: 'bootstrap',
+            icon: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                fullName: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The full name is required'
+                        }
+                    }
+                },
+                ccNumber: {
+                    selector: '[data-stripe="number"]',
+                    validators: {
+                        notEmpty: {
+                            message: 'The credit card number is required'
+                        },
+                        creditCard: {
+                            message: 'The credit card number is not valid'
+                        }
+                    }
+                },
+                expMonth: {
+                    selector: '[data-stripe="exp-month"]',
+                    row: '.col-xs-3',
+                    validators: {
+                        notEmpty: {
+                            message: 'The expiration month is required'
+                        },
+                        digits: {
+                            message: 'The expiration month can contain digits only'
+                        },
+                        callback: {
+                            message: 'Expired',
+                            callback: function(value, validator) {
+                                value = parseInt(value, 10);
+                                var year         = validator.getFieldElements('expYear').val(),
+                                    currentMonth = new Date().getMonth() + 1,
+                                    currentYear  = new Date().getFullYear();
+                                if (value < 0 || value > 12) {
+                                    return false;
+                                }
+                                if (year == '') {
+                                    return true;
+                                }
+                                year = parseInt(year, 10);
+                                if (year > currentYear || (year == currentYear && value >= currentMonth)) {
+                                    validator.updateStatus('expYear', 'VALID');
+                                    return true;
+                                } else {
+                                    return false;
+                                }
+                            }
+                        }
+                    }
+                },
+                expYear: {
+                    selector: '[data-stripe="exp-year"]',
+                    row: '.col-xs-3',
+                    validators: {
+                        notEmpty: {
+                            message: 'The expiration year is required'
+                        },
+                        digits: {
+                            message: 'The expiration year can contain digits only'
+                        },
+                        callback: {
+                            message: 'Expired',
+                            callback: function(value, validator) {
+                                value = parseInt(value, 10);
+                                var month        = validator.getFieldElements('expMonth').val(),
+                                    currentMonth = new Date().getMonth() + 1,
+                                    currentYear  = new Date().getFullYear();
+                                if (value < currentYear || value > currentYear + 100) {
+                                    return false;
+                                }
+                                if (month == '') {
+                                    return false;
+                                }
+                                month = parseInt(month, 10);
+                                if (value > currentYear || (value == currentYear && month >= currentMonth)) {
+                                    validator.updateStatus('expMonth', 'VALID');
+                                    return true;
+                                } else {
+                                    return false;
+                                }
+                            }
+                        }
+                    }
+                },
+                cvvNumber: {
+                    selector: '[data-stripe="cvc"]',
+                    validators: {
+                        notEmpty: {
+                            message: 'The CVV number is required'
+                        },
+                        cvv: {
+                            message: 'The value is not a valid CVV',
+                            creditCardField: 'ccNumber'
+                        }
+                    }
+                }
+            }
+        })
+        .on('success.form.fv', function(e) {
+            e.preventDefault();
 
-// contributes ANY amount
-	$('.customButton').on('click', function(e) {
-		// e.preventDefault();
-		// console.log("preventing default")
-		// Open Checkout with further options
-		var amount = $("custom-gift-amount").val() * 100;
-		handler.open({
-	  name: 'Jaclyn and Pablo',
-	  description: 'fund some happiness',
-	  amount: amount
-	});
-		e.preventDefault();
-	});
+            var $form = $(e.target);
 
-	// Close Checkout on page navigation
-	$(window).on('popstate', function() {
-		handler.close();
-	});
+            // Reset the token first
+            $form.find('[name="token"]').val('');
+
+            Stripe.card.createToken($form, function(status, response) {
+                if (response.error) {
+                    bootbox.alert(response.error.message);
+                } else {
+                    // Set the token value
+                    $form.find('[name="token"]').val(response.id);
+
+                    // You can submit the form to back-end as usual
+                    // $form.get(0).submit();
+
+                    // Or using Ajax
+                    $.ajax({
+                        // You need to change the url option to your back-end endpoint
+                        url: 'response.json',
+                        data: $form.serialize(),
+                        dataType: 'json'
+                    }).success(function(data) {
+                        // Handle the response
+                        bootbox.alert(data.message);
+
+                        // Reset the form
+                        $form.formValidation('resetForm', true);
+                    });
+                }
+            });
+        });
+});
 
 })

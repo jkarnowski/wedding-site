@@ -29,137 +29,23 @@
 
 	<div class="container registry-background">
 		<div class="row">
-			<div class="col span-12-d gift-border debug">
+				<% @items.each do |item| %>
+			<div class="col span-12-d debug gift-border">
 				<div class="col span-3-d debug photo-style">
 					<%= image_tag("http://i.telegraph.co.uk/multimedia/archive/02070/air-getty_2070440c.jpg", :alt => "flights", height: 120, width: 130) %>
 				</div>
 
 				<div class="col span-6-d debug">
-					<h4 class="registry-title">Round Trip Tickets</h4>
-					<p class="description">We want to explore Japan!</p>
+					<h4 class="registry-title"><%= item.title %></h4>
+					<p class="description"><%= item.description %></p>
 				</div>
 
 				<div class="col span-3-d debug">
-					<p class="cost">$100.00</p>
-					<p class="multiplier">* 40</p>
-
-					<button class="btn btn-primary btn-lg customButton">Contribute</button>
-				
+					<p class="cost">$<%= item.total_cost %>.00</p>
+					<div><button class="customButton">contribute</button></div>
 				</div>
 			</div>
-		</div>
-
-		<div class="row">
-	<div class="col span-12-d gift-border debug">
-		<div class="col span-3-d debug photo-style">
-			<%= image_tag("https://tokyo5.files.wordpress.com/2009/03/dscf4677.jpg", :alt => "flights", height: 120, width: 130) %>
-		</div>
-
-		<div class="col span-6-d debug">
-			<h4 class="registry-title">Lodging</h4>
-			<p class="description">Your gift will keep us well rested. No hostels on our honeymoon!</p>
-		</div>
-
-		<div class="col span-3-d debug">
-			<p class="cost">$90</p>
-			<p>* 30</p>
-			<button class="btn btn-primary btn-lg customButton">Contribute</button>
+				<% end %>
 		</div>
 	</div>
-</div>
-	
-	<div class="row">
-	<div class="col span-12-d gift-border debug">
-		<div class="col span-3-d debug photo-style">
-			<%= image_tag("http://www.onislam.net/english/oimedia/onislamen/images/mainimages/Japanese-Traditional-Sushi-Recipe.jpg", :alt => "flights", height: 120, width: 130) %>
-		</div>
 
-		<div class="col span-6-d debug">
-			<h4 class="registry-title">Classic Japanese Meals</h4>
-			<p class="description">Japanese food is interesting, creative and delicious. We love rice! This gift will help us taste our way around Japan.</p>
-		</div>
-
-		<div class="col span-3-d debug">
-			<p class="cost">$30</p>
-			<p>* 10</p>
-			<button class="btn btn-primary btn-lg customButton">Contribute</button>
-		</div>
-	</div>
-</div>
-	
-	<div class="row">
-	<div class="col span-12-d gift-border debug">
-		<div class="col span-3-d debug photo-style">
-			<%= image_tag("http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr03/1/12/enhanced-buzz-wide-21599-1380645416-11.jpg", :alt => "flights", height: 120, width: 130) %>
-		</div>
-
-		<div class="col span-6-d debug">
-			<h4 class="registry-title">Spa Day</h4>
-			<p class="description">What honeymoon would be complete without a couples massage or pedicure?</p>
-		</div>
-
-		<div class="col span-3-d debug">
-			<p class="cost">$75.00</p>
-			<p>*2</p>
-			<button class="btn btn-primary btn-lg customButton">Contribute</button>
-		</div>
-	</div>
-</div>
-	
-	<div class="row">
-	<div class="col span-12-d gift-border debug">
-		<div class="col span-3-d debug photo-style">
-			<%= image_tag("http://media-cache-ec0.pinimg.com/736x/23/a4/26/23a42649f0ee14effe791c718f691cde.jpg", :alt => "flights", height: 120, width: 130) %>
-		</div>
-
-		<div class="col span-6-d debug">
-			<h4 class="registry-title">Cooking Class</h4>
-			<p class="description">Pablo says my rice could use some work. I got the hint; help me feed my hungry husband!</p>
-		</div>
-
-		<div class="col span-3-d debug">
-			<p class="cost">$50.00</p>
-			<p>* 2</p>
-			<button class="btn btn-primary btn-lg customButton">Contribute</button>
-		</div>
-	</div>
-</div>
-	
-	<div class="row">
-	<div class="col span-12-d gift-border debug">
-		<div class="col span-3-d debug photo-style">
-			<%= image_tag("https://upload.wikimedia.org/wikipedia/commons/1/17/Horyu-ji11s3200.jpg", :alt => "flights", height: 120, width: 130) %>
-		</div>
-
-		<div class="col span-6-d debug">
-			<h4 class="registry-title">Sightseeing</h4>
-			<p class="description">From gardens to temples to hot springs and islands, there is so much to see!</p>
-		</div>
-
-		<div class="col span-3-d debug">
-			<p class="cost">$50.00</p>
-			<p>* 10</p>
-			<button class="btn btn-primary btn-lg customButton">Contribute</button>
-		</div>
-	</div>
-</div>
-
-	<div class="row">
-	<div class="col span-12-d gift-border debug">
-		<div class="col span-3-d debug photo-style">
-			<%= image_tag("http://www.anniesbacktoedengarden.com/images/10%20best%20cherry%20blossom%20japan.jpg", :alt => "flights", height: 120, width: 130) %>
-		</div>
-
-		<div class="col span-6-d debug">
-			<h4 class="registry-title">Wild Card</h4>
-			<p class="description">Inspire us!</p>
-		</div>
-
-		<div class="col span-3-d debug">
-			<p class="cost">$25.00</p>
-			<p>* 10</p>
-			<button class="btn btn-primary btn-lg customButton">Contribute</button>
-		</div>
-	</div>
-</div>
-</div>  <!-- div for container -->
