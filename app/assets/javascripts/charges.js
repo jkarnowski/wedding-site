@@ -2,7 +2,7 @@
 // All this logic will automatically be available in application.js.
 $(document).ready(function(){
 
-	console.log("inside the charges")
+	// console.log("inside the charges")
 	var handler = StripeCheckout.configure({
 	    key: 'pk_test_UlUbDYdUkO0qkJ2r1Iw3DYtZ',
 	    token: function (token) {
