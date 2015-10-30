@@ -20,6 +20,7 @@
 
 /*COLOR COMBOS*/
 /* DARK BLUE #22313F*/ 
+/*carribean teal #03C9A9*/
 /*LIGHT BLUE #6BB9F0 */
 /*ORANGE #F89406 */
 
@@ -226,7 +227,8 @@ nav ul.nav-2 {
     height: 2em;
     margin: 0 0 1em 0;
     padding: 1em;
-    background-color: #22A7F0;
+    background-color: #03C9A9;
+    /*background-color: #22A7F0;*/
 }
 
 /*nav ul.nav-2 ul {

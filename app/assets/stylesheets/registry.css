@@ -2,7 +2,7 @@
 .friendship {
 	width: 100%;
 	margin: 0 auto;
-	background-color: #6BB9F0;
+	background-color: #03C9A9;
 	color: #22313F;
 	margin-bottom: 20px;
 }
@@ -27,9 +27,9 @@
 	margin-top: 20px; 
 }
 
-.multiplier {
+/*.multiplier {
 	font-size: 18px;
-}
+}*/
 
 /*.registry-background {
 	background-color: #ECF0F1;

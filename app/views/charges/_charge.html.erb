@@ -1,37 +1,7 @@
-<%= form_for charges_path do |f| %>
-<%= f.hidden_field :stripe_card_token %>
-<% if @charge.errors.any? %>
-<div class="error_messages">
-	<h2><%= pluralize(@charge.errors.count, "error") %> prohibited this charge from going through:</h2>
-	<ul>
-		<% @charge.errors.full_message.each do |message| %>
-		<li><%= message %></li>
-		<% end %>
-	</ul>
-</div>
-<% end %>
-<div class="field">
-	<%= f.label :email %>
-	<%= f.text_field :email %>
-</div>
+<form id="myForm" action="charges" method="POST">
+    <span id="dollar-sign">$</span><input type="text" id="amount" name="amount" />
+    <input type="hidden" id="stripeToken" name="stripeToken" />
+    <input type="hidden" id="stripeEmail" name="stripeEmail" />
+</form>
 
-<div class="field">
-	<%= f.label :amount %>
-	<%= f.text_field :amount, value: @amount ||= "" %>
-</div>
-
-<div class="field">
-	<%= label_tag :card_number, "Credit Card Number" %>
-	<%= text_field_tag :card_number, nil, name: nil %>
-</div>
-<div class="field">
-	<%= label_tag :card_code, "Security Code on card (CVV)" %>
-	<%= text_field_tag :card_code, nil, name: nil %>
-</div>
-<div class="field">
-	<%= label_tag :card_month, "Card Expiration" %>
-	<%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
-	<%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
-</div>
-<div class="actions"><%= f.submit "Submit" %></div>
-<% end %>
+<input type="button" id="customButton" class="contribute-btn" value="contribute">
