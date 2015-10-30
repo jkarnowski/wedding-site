@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get 'story/index'
   get 'where/index'
 
-  resources :playlists
   resources :rsvps
   resources :charges
 
