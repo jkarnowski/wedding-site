@@ -40,6 +40,9 @@ There are a few ways to setup Stripe. [Check out their docs.](https://stripe.com
 
 ##Testing 
 
-
+##In the Future
+- add MC tests
+- send email on RSVP to add event to calendar
+- update layout of honeymoon fund to show visualization towards total amount gifted / remaining
 
 
