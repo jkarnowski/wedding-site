@@ -11,18 +11,18 @@
 
 	<!-- <div class="col span-12-d friendship debug"> -->
 		<div class="row friendship">
-		<div class="col span-8-d debug">
+		<div class="col span-8-d debug gifts-story">
 			<p>We have been asked what we want/need as a newly married couple. Simple - your friendship and love.</p>
 			<p>Your presence at our wedding and on the dance floor is what we want most of all.</p>
-			<p>But if you insist, we would also love an incredible honeymoon adventure to Japan.We want to see and do as much as we can on a 10-day trip.</p>
+			<p>But if you insist, we would also love an incredible honeymoon adventure to Japan. We want to see and do as much as we can on a 10-day trip.</p>
 			<p>Here's how it works. Just pick an item you would like to contribute to, click and make an online payment directly to us. You'll be asked to leave your name and message and please do, we want to thank you for keeping us well fed in Tokyo.</p>
 		</div>
 
 		<div class="col span-4-d debug">
 			<h4>the utensils and home decor?</h4>
 			<div class="registry-box-align">
-			<a href="http://www.etsy.com/registry/NzQ4NzEwN3w4Njk1ODcw/" title="See our registry on Etsy"><%= image_tag("etsy-registry.jpeg", :alt => 'etsy-registry', height: 130, width: 140) %></a>
-			<a href="http://www.amazon.com/registry/wedding/CM4P9915GL6J" title="Registry on Amazon"><%= image_tag("amazonRegistry.png", :alt => "amazon registry", height: 100, width: 170) %></a>
+			<a href="http://www.etsy.com/registry/NzQ4NzEwN3w4Njk1ODcw/" title="See our registry on Etsy"><%= image_tag("etsy-registry.jpeg", :alt => 'etsy-registry', height: 100, width: 110) %></a>
+			<a href="http://www.amazon.com/registry/wedding/CM4P9915GL6J" title="Registry on Amazon"><%= image_tag("amazonRegistry.png", :alt => "amazon registry", height: 90, width: 160) %></a>
 		</div>
 		</div>
 	</div>
@@ -41,7 +41,8 @@
 				</div>
 
 				<div class="col span-3-d debug">
-					<p id="cost-txt">cost to cover: <span class="cost">$<%= item.total_cost %>.00</span></p>
+					<p id="cost-txt">possible contribution
+					<p class="cost">$<%= item.desired_amount %>.00 * <%= item.multiplier %></p>
 					<div><%= render 'charges/charge' %></div>
 				</div>
 			</div>
