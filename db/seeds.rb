@@ -15,11 +15,16 @@ Registry.create(title: "Cooking Class", description: "Pablo says my rice could u
 Registry.create(title: "Sightseeing", description: "From gardens to temples to hot springs and islands, there is so much to explore!", total_cost: 400, image: "https://upload.wikimedia.org/wikipedia/commons/1/17/Horyu-ji11s3200.jpg")
 Registry.create(title: "Wild Card", description: "Inspire us to do something unique on our first big international trip as husband and wife.", total_cost: 250, image: "http://www.anniesbacktoedengarden.com/images/10%20best%20cherry%20blossom%20japan.jpg")
 
-Playlist.create(song: "Lean On")
-Playlist.create(song: "Powerful")
-Playlist.create(song: "Sweet Escape")
-Playlist.create(song: "Cool For the Summer")
-Playlist.create(song: "Right Here, Right Now")
+User.create(name: "Jaclyn Karnowski", email: "jaclyn@wedding.com", rsvp_response: 'yes')
+User.create(name: "Ashley Karnowski", email: "ashleyk@wedding.com", rsvp_response: 'yes')
+User.create(name: "Pablo Perez", email: "pabloperezpp@hotmail.com", rsvp_response: 'yes')
+
+
+Playlist.create(song: "Lean On", user_id: 1)
+Playlist.create(song: "Powerful", user_id: 2)
+Playlist.create(song: "Sweet Escape", user_id: 2)
+Playlist.create(song: "Cool For the Summer", user_id: 3)
+Playlist.create(song: "Right Here, Right Now", user_id: 3)
 
 
 

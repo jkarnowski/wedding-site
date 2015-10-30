@@ -1,6 +1,6 @@
 class RsvpsController < ApplicationController
   def index
-  	@users = User.all 
+  	# @users = User.all
   end
 
   def new
@@ -10,6 +10,9 @@ class RsvpsController < ApplicationController
   def create
   	User.create(user_params)
   	redirect_to root_path
+  end
+
+  def show
   end
 
   private
