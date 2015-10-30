@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  get 'rsvps/index'
+
+  get 'rsvps/new'
+
+  get 'rsvps/show'
+
   get 'welcome/index'
   get 'registry/index'
   get 'story/index'
