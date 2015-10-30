@@ -23,8 +23,13 @@
 }
 
 .cost {
-	font-size: 25px;
+	font-size: 18px;
 	margin-top: 20px; 
+}
+
+#cost-txt {
+	font-size: 14px;
+	margin-right: 15px;
 }
 
 /*.multiplier {

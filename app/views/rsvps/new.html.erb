@@ -9,21 +9,25 @@
 </div> <!-- close-container -->
 
 <div class="col span-12-d">
-	<div class="rsvp-styling">
+	<div class="rsvp-form">
 		<%= form_for :user, :url =>url_for(controller: 'rsvps', action: 'create'), :html => {:method => :post} do |f| %>
 		<p class="space">
-			<%= f.label :name, class: 'label' %><br>
+			<%= f.label :name, class: 'label-rsvp' %><br>
 			<%= f.text_field :name, class: 'input-txt' %>
 		</p>
 
 		<p class="space">
-			<%= f.label :email, class: 'label' %><br>
+			<%= f.label :email, class: 'label-rsvp' %><br>
 			<%= f.text_field :email, class: 'input-txt' %>
 		</p>
 
-		<p class="space">
-			<%= f.label :rsvp_response, class: 'label' %><br>
-			<%= f.text_field :rsvp_response, class: 'input-txt' %>
+		<p>
+			<%= radio_button_tag(:rsvp_response, "Yes") %>
+			<%= label_tag(:rsvp_response, "Let's Set Sail! I/We will be there!", class: 'rsvp-button-txt') %>
+		</p>
+		<p>
+			<%= radio_button_tag(:rsvp_response, "No") %>
+			<%= label_tag(:rsvp_response, "Regretfully, have to stay anchored.", class: 'rsvp-button-txt') %>
 		</p>
 
 		<%= f.submit "Submit", class: "submit-button" %>
