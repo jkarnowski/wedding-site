@@ -1,2 +1,33 @@
-<h1>Rsvps#new</h1>
-<p>Find me in app/views/rsvps/new.html.erb</p>
+<%= render 'playlists/navigation_not_root' %>
+
+<div class="container">
+	<div class="row">
+		<div class="col span-12-d">
+			<h2 class="heading-shadow">RSVP</h2>
+		</div>
+	</div>
+</div> <!-- close-container -->
+
+<div class="col span-12-d">
+	<div class="rsvp-styling">
+		<%= form_for :user, :url =>url_for(controller: 'rsvps', action: 'create'), :html => {:method => :post} do |f| %>
+		<p class="space">
+			<%= f.label :name, class: 'label' %><br>
+			<%= f.text_field :name, class: 'input-txt' %>
+		</p>
+
+		<p class="space">
+			<%= f.label :email, class: 'label' %><br>
+			<%= f.text_field :email, class: 'input-txt' %>
+		</p>
+
+		<p class="space">
+			<%= f.label :rsvp_response, class: 'label' %><br>
+			<%= f.text_field :rsvp_response, class: 'input-txt' %>
+		</p>
+
+		<%= f.submit "Submit", class: "submit-button" %>
+
+		<% end  %>
+	</div>
+</div>
