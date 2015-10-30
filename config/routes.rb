@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get 'registry/index'
   get 'story/index'
   get 'where/index'
+  get 'playlists' => 'playlists#index'
 
-  resources :playlists
   resources :rsvps
   resources :charges
 

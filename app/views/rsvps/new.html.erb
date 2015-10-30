@@ -11,14 +11,13 @@
 <div class="col span-12-d">
 	<div class="rsvp-form">
 		<%= form_for :user, :url =>url_for(controller: 'rsvps', action: 'create'), :html => {:method => :post} do |f| %>
+		
 		<p class="space">
-			<%= f.label :name, class: 'label-rsvp' %><br>
-			<%= f.text_field :name, class: 'input-txt' %>
+			<%= f.text_field :name, placeholder: 'NAME(S) OF GUESTS', class: 'input-txt' %>
 		</p>
 
 		<p class="space">
-			<%= f.label :email, class: 'label-rsvp' %><br>
-			<%= f.text_field :email, class: 'input-txt' %>
+			<%= f.text_field :email, placeholder: 'your email', class: 'input-txt' %>
 		</p>
 
 		<p>
@@ -30,8 +29,14 @@
 			<%= label_tag(:rsvp_response, "Regretfully, have to stay anchored.", class: 'rsvp-button-txt') %>
 		</p>
 
+		<p class="space">
+			<%= f.fields_for :playlists do |f| %>
+			<%= f.text_field :song,  placeholder: 'what song do you love to dance to?', class: 'song-input' %>
+		</p>
+
 		<%= f.submit "Submit", class: "submit-button" %>
 
 		<% end  %>
 	</div>
+		<% end  %>
 </div>

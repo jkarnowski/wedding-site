@@ -22,7 +22,7 @@
 /* DARK BLUE #22313F*/ 
 /*carribean teal #03C9A9*/
 /*LIGHT BLUE #6BB9F0 */
-/*ORANGE #F89406 */
+/*ORANGE #22313F */
 
 /*NAV Colors*/
 /*DARK: #2C3E50*/
@@ -284,6 +284,16 @@ p {
     text-align: center;
 }
 
+/*for RSVP*/
+.submit-button {
+    font-size: 20px;
+    background-color: #D35400;
+    font-family: 'Cabin', sans-serif;
+    width: 11%;
+    color: #eeeeee;
+    margin: 5px 45%;
+    padding: 5px;
+}
 /*.heading-shadow {
   text-shadow: 1px 1px 1px gray;
 }*/
