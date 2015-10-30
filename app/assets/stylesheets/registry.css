@@ -32,39 +32,10 @@
 	margin-right: 15px;
 }
 
-/*.multiplier {
-	font-size: 18px;
-}*/
-
-/*.registry-background {
-	background-color: #ECF0F1;
-}
-*/
-
 .gift-border {
 	outline: 1px solid gray;
 	margin-bottom: 10px;
 	margin-top: 30px;
-}
-
-button {
-	font-size: 22px;
-	text-align: center;
-	background-color: #22313F;
-	margin-left: 50px;
-	letter-spacing: 1px;
-	color: white;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-}
-
-.registry-buttons {
-	height: 110px;
-	width: 120px;
-	margin-right: 10px;
-	margin-left: 40px;
-	margin-bottom: 5px;
 }
 
 .registry-box-align {
@@ -74,7 +45,6 @@ button {
 
 .registry-header {
 	text-align: center;
-	/*margin-left: 5px;*/
 	margin-right: 40px;
 	padding: 1em;
 }

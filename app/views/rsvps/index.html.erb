@@ -1,2 +1,12 @@
 <%= render 'playlists/navigation_not_root' %>
 
+<div class="container">
+	<div class="row">
+		<div class="col span-12-d debug">
+			<h3>RSVP Count:</h3>
+			<% @users.each do |user| %>
+			<p><%= user.name %> : <%= user.rsvp_response %></p>
+			<% end %>		
+		</div>
+	</div>
+</div>
