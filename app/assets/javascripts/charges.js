@@ -14,6 +14,7 @@ $(document).ready(function(){
 
 	$('#customButton').on('click', function (e) {
 	    var amount = $("#amount").val() * 100;
+	    // console.log(amount)
 	    var displayAmount = parseFloat(Math.floor($("#amount").val() * 100) / 100).toFixed(2);
 
 	    // Open Checkout with further options
