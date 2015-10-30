@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   
   get 'welcome/index'
+
   get 'registry/index'
   get 'story/index'
   get 'where/index'
 
   resources :playlists
+  resources :rsvps
   resources :charges
 
   # The priority is based upon order of creation: first created -> highest priority.

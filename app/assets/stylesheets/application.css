@@ -282,3 +282,7 @@ p {
     font-family: 'Cabin', sans-serif;
     text-align: center;
 }
+
+.heading-shadow {
+  text-shadow: 1px 1px 1px gray;
+}
