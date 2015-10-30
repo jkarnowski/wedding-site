@@ -276,6 +276,7 @@ nav ul.nav-2 a:hover, a:active {
 h1, h2, h3, h4, h5 {
     font-family: 'Nixie One', cursive;
     text-align: center;
+    text-shadow: 1px 1px 1px gray;
 }
 
 p {
@@ -283,6 +284,6 @@ p {
     text-align: center;
 }
 
-.heading-shadow {
+/*.heading-shadow {
   text-shadow: 1px 1px 1px gray;
-}
+}*/
