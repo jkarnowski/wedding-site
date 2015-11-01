@@ -29,6 +29,7 @@
 
 	<div class="container">
 		<div class="row">
+				<% index = 0 %>
 				<% @items.each do |item| %>
 			<div class="col span-12-d debug gift-border">
 				<div class="col span-3-d debug photo-style">
@@ -43,8 +44,16 @@
 				<div class="col span-3-d debug">
 					<p id="cost-txt">possible contribution
 					<p class="cost">$<%= item.desired_amount %>.00 * <%= item.multiplier %></p>
-					<div><%= render 'charges/charge' %></div>
+
+						<form id="myForm" action="/charges" method="POST">
+						    <span id="dollar-sign">$</span><input type="text" id= "amount_<%= index %>" name="amount_<%= index %>" />
+						    <input type="hidden" id="stripeToken" name="stripeToken" />
+						    <input type="hidden" id="stripeEmail" name="stripeEmail" />
+						</form>
+
+						<input type="button" class="contribute-btn customButton" value="contribute" data-index="<%= index %>">		
 				</div>
+				<% index += 1 %>
 			</div>
 				<% end %>
 		</div>

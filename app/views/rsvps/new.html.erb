@@ -13,11 +13,11 @@
 		<%= form_for :user, :url =>url_for(controller: 'rsvps', action: 'create'), :html => {:method => :post} do |f| %>
 		
 		<p class="space">
-			<%= f.text_field :name, placeholder: 'NAME(S) OF GUESTS', class: 'input-txt' %>
+			<%= f.text_field :name, placeholder: 'your name(s)', class: 'input-txt' %>
 		</p>
 
 		<p class="space">
-			<%= f.text_field :email, placeholder: 'your email', class: 'input-txt' %>
+			<%= f.text_field :email, placeholder: 'email', class: 'input-txt' %>
 		</p>
 
 		<p>

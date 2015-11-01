@@ -12,10 +12,16 @@ $(document).ready(function(){
 	    }
 	});
 
-	$('#customButton').on('click', function (e) {
-	    var amount = $("#amount").val() * 100;
+	$('.customButton').on('click', function (e) {
+
+			var idOfTheFormElements = "#amount_" + e.toElement.dataset.index;
+
+			console.log(idOfTheFormElements);
+
+	    var amount = $(idOfTheFormElements).val() * 100;
+
 	    // console.log(amount)
-	    var displayAmount = parseFloat(Math.floor($("#amount").val() * 100) / 100).toFixed(2);
+	    var displayAmount = parseFloat(Math.floor($(idOfTheFormElements).val() * 100) / 100).toFixed(2);
 
 	    // Open Checkout with further options
 	    handler.open({
@@ -25,7 +31,6 @@ $(document).ready(function(){
 	    });
 	    e.preventDefault();
 	});
-
 })
 
 	// Close Checkout on page navigation

@@ -1,7 +1,8 @@
+
 <form id="myForm" action="/charges" method="POST">
-    <span id="dollar-sign">$</span><input type="text" id="amount" name="amount" />
+    <span id="dollar-sign">$</span><input type="text" id= "amount_<%= index %>" name="amount_<%= index %>" />
     <input type="hidden" id="stripeToken" name="stripeToken" />
     <input type="hidden" id="stripeEmail" name="stripeEmail" />
 </form>
 
-<input type="button" id="customButton" class="contribute-btn" value="contribute">
+<input type="button" class="contribute-btn customButton" value="contribute" data-index="<%= index %>">	
