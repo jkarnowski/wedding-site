@@ -231,13 +231,6 @@ nav ul.nav-2 {
     /*background-color: #22A7F0;*/
 }
 
-/*nav ul.nav-2 ul {
-    list-style: none;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-}*/
-
 nav ul.nav-2 li {
     display: inline-block;
     font-family: 'Raleway', sans-serif;
@@ -294,6 +287,3 @@ p {
     margin: 5px 45%;
     padding: 5px;
 }
-/*.heading-shadow {
-  text-shadow: 1px 1px 1px gray;
-}*/
