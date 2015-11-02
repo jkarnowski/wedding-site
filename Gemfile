@@ -35,6 +35,7 @@ gem 'stripe'
 #to deploy to heroku
 gem 'rails_12factor', group: :production
 
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -43,11 +44,14 @@ group :development, :test do
   gem 'byebug'
   gem 'better_errors'
   gem 'rspec-rails'
-	gem 'capybara'
-	gem 'binding_of_caller'
+  gem 'capybara'
+  gem 'binding_of_caller'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+
+  # webserver for production
+  # gem 'puma'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   # gem 'spring'
