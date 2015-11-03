@@ -43,8 +43,7 @@
 
 				<div class="col span-3-d debug">
 					<p id="cost-txt">possible contribution
-					<p class="cost">$<%= item.desired_amount %>.00 * <%= item.multiplier %></p>
-					<p class="cost-txt">remaining amount to fund:<%= item.remaining_amount %></p>
+					<p class="cost">$ <%= item.remaining_amount %>.00 left to go!</p>
 
 						<form id="myForm" action="/charges" method="POST">
 						    <span id="dollar-sign">$</span><input type="text" id= "amount_<%= index %>" name="amount_<%= index %>" />
