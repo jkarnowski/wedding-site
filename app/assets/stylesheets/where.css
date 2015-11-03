@@ -5,7 +5,7 @@
 
 #googleMap {
 	width: 90%;
-	height: 410px;
+	height: 450px;
 	margin-left: 10px;
 	margin-top: 50px;
 	margin-bottom: 10px;	
@@ -13,10 +13,11 @@
 
 .ceremony {
 	margin-top: 50px;
+	font-size: 22px;
 }
 
 .location-info {
-	font-size: 11px;
+	font-size: 14px;
 }
 
 #adults {
@@ -29,8 +30,8 @@
 }
 
 .time {
-	color: #F89406;
-	font-size: 20px;
+	color: #D35400;
+	font-size: 22px;
 }
 
 .map-size {
