@@ -9,20 +9,15 @@
 
 .ceremony {
 	margin-top: 50px;
-	font-size: 22px;
 }
 
-p.location-info {
-	font-size: 14px;
+p.party-text {
+	font-size: 12px;
 }
 
 #adults {
 	font-size: 11px;
 	font-style: italic;
-}
-
-p.party {
-	font-size: 13px;
 }
 
 .time {
