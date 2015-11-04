@@ -14,12 +14,10 @@
 	font-size: 24px;
 	padding: 1em;
 	color: #eeeeee;
-  font-family: 'Nixie One', cursive;
 }
 
 .label-rsvp {
 	color: black;
-  font-family: 'Nixie One', cursive;
   font-size: 28px;
   letter-spacing: 1.2px;
 }
@@ -28,7 +26,6 @@
 	font-size: 24px;
 	color: white;
 	letter-spacing: 1.3px;
-  font-family: 'Cabin', sans-serif;
 }
 
 .space {
@@ -38,14 +35,12 @@
 .input-txt {
 	color: #22313F;
 	padding: 5px;
-	font-family: 'Cabin', sans-serif;
 	text-align: center;
 	width: 30%;
 }
 
 .song-input {
 	margin-top: 5px;
-	font-family: 'Cabin', sans-serif;
 	padding: 3px;
 	font-size: 18px;
 	text-align: center;
