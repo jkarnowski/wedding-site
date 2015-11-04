@@ -2,7 +2,7 @@
 // All this logic will automatically be available in application.js.
 
 $(document).on('ready', function(){
-	console.log("inside the where")
+	// console.log("inside the where")
 	showMap();
 	
 })

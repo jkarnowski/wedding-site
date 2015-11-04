@@ -71,7 +71,7 @@ html {
     mobile container leaves some whitespace on the sides
 */
 .container {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
 }
 
