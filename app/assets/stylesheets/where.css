@@ -1,18 +1,17 @@
-
-#googleMap {
-	width: 90%;
-	height: 450px;
-	margin-left: 10px;
-	margin-top: 50px;
-	margin-bottom: 10px;	
+.map-size {
+	display: inline-block;
+	width: 80%;
+	height: 500px;
+	margin-left: 100px;
+	margin-top: 40px;
+	float: left;
 }
-
-.ceremony {
-	margin-top: 50px;
+.text-divv {
+	margin-top: 45px;
 }
 
 p.party-text {
-	font-size: 12px;
+	font-size: 18px;
 }
 
 #adults {
@@ -22,14 +21,9 @@ p.party-text {
 
 .time {
 	color: #D35400;
-	font-size: 22px;
+	font-size: 24px;
 }
 
-.map-size {
-	/*margin: 0 auto;*/
-	display: inline-block;
-	float: left;
-}
 
 #hotel {
 	width: 80%;

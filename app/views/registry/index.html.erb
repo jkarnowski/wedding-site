@@ -44,16 +44,17 @@
 					<p id="cost-txt">possible contribution
 					<p class="cost">$ <%= item.remaining_amount %>.00 left to go!</p>
 
-						<form id="myForm" action="/charges" method="POST">
-						    <span id="dollar-sign">$</span><input type="text" id= "amount_<%= index %>" name="amount_<%= index %>" />
-						    <input type="hidden" id="stripeToken" name="stripeToken" />
-						    <input type="hidden" id="stripeEmail" name="stripeEmail" />
-						</form>
+					<form id="myForm" action="/charges" method="POST">
+						<span id="dollar-sign">$</span><input type="text" id= "amount_<%= index %>" name="amount_<%= index %>" />
+						<input type="hidden" id="stripeToken" name="stripeToken" />
+						<input type="hidden" id="stripeEmail" name="stripeEmail" />
+					</form>
 
 						<input type="button" class="contribute-btn customButton" value="contribute" data-index="<%= index %>">		
 				</div>
 				<% index += 1 %>
 			</div>
+			
 				<% end %>
 		</div>
 	</div>
