@@ -11,13 +11,13 @@ class PlaylistsController < ApplicationController
   end
 
   def create
-  	Playlist.create(playlist_params)
+  	Playlist.create(user_params)
   	redirect_to root_path
   end
 
 
-  private
-  def playlist_params
-  	params.require(:playlist).permit(:song)
-  end
+  # private
+  # def playlist_params
+  # 	params.require(:playlist).permit(:song)
+  # end
 end

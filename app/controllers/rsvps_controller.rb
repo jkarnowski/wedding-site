@@ -9,6 +9,8 @@ class RsvpsController < ApplicationController
 
   def create
   	User.create(user_params)
+
+    flash[:notice] = "We got your RSVP"
   	redirect_to root_path
   end
 
@@ -17,7 +19,9 @@ class RsvpsController < ApplicationController
 
   private
 	def user_params
-		params.require(:user).permit(:name, :email, :rsvp_response)
+		params.require(:user).permit(:name, :email, :rsvp_response, :playlists_attributes => :song)
 	end
 
 end
+
+

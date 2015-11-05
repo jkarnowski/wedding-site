@@ -2,14 +2,8 @@ class ChargesController < ApplicationController
 
 
 	def new
-		# if request.xhr?
-		# 	render 'charge', :layout => false
-		# else
-		# 	redirect_to charges_path
-		# end
 	end
 
-# how do I get the amount from the params in the form? 
 	def create
 	  # Amount in cents
 
@@ -27,9 +21,11 @@ class ChargesController < ApplicationController
 
 	rescue Stripe::CardError => e
 	  flash[:error] = e.message
+	  
 	  redirect_to registry_path
 	end
 
+	
 	private
 
 	def charge_params
