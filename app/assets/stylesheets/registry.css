@@ -9,7 +9,7 @@
 
 .description {
 	font-family: 'Cabin', sans-serif;
-	font-size: 15px;
+	font-size: 18px;
 	padding: 1em;
 }
 
@@ -17,9 +17,16 @@
 	margin-top: 15px;
 }
 
+.gifts-story > p {
+	font-size: 18px;
+}
+
+.registry-box-align {
+	margin-left: 80px;
+}
+
 .registry-title {
-	font-size: 30px;
-	padding: 10px;
+	padding: 5px;
 }
 
 .photo-style {
@@ -27,15 +34,21 @@
 }
 
 .cost {
-	font-size: 18px;
+	font-size: 22px;
 	margin-top: 5px; 
 }
 
 #cost-txt {
-	font-size: 11px;
+	font-size: 13px;
 	margin-right: 15px;
 	margin-top: 5px;
 	font-style: italic;
+}
+
+.zeros {
+	font-size: 14px;
+	padding: 5px;
+	text-align: center;
 }
 
 .gift-border {
@@ -44,10 +57,6 @@
 	margin-top: 30px;
 }
 
-.registry-box-align {
-	margin-left: 10px;
-	margin-bottom: 10px;
-}
 
 .registry-header {
 	text-align: center;
