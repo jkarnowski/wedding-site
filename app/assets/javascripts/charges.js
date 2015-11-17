@@ -5,6 +5,7 @@ $(document).ready(function(){
 	// console.log("inside the charges")
 	var handler = StripeCheckout.configure({
 	    // key: 'pk_test_UlUbDYdUkO0qkJ2r1Iw3DYtZ',
+	    key: ENV['PUBLISHABLE_KEY'],
 	    token: function (token) {
 	        $("#stripeToken").val(token.id);
 	        $("#stripeEmail").val(token.email);
