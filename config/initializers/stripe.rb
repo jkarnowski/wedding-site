@@ -4,8 +4,3 @@ Rails.configuration.stripe = {
 }
 
 Stripe.api_key = Rails.configuration.stripe[:secret_key]
-
-# from RailsCast
-# include .env in .ignore
-# Stripe.api_key = "secret key"
-# STRIPE_PUBLIC_KEY = " "
