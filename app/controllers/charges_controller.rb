@@ -2,7 +2,6 @@ class ChargesController < ApplicationController
 
 
 	def index
-		
 	end
 
 	def new
@@ -26,7 +25,7 @@ class ChargesController < ApplicationController
 	rescue Stripe::CardError => e
 	  flash[:error] = e.message
 	  
-	  redirect_to root_path
+	  redirect_to charges_path
 	end
 
 	

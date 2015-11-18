@@ -21,7 +21,6 @@ $(document).ready(function(){
 	    var amount = $(idOfTheFormElements).val() * 100;
 	    console.log(amount);
 
-	    // console.log(amount)
 	    var displayAmount = parseFloat(Math.floor($(idOfTheFormElements).val() * 100) / 100).toFixed(2);
 
 	    // Open Checkout with further options
