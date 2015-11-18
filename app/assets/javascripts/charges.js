@@ -2,38 +2,71 @@
 // All this logic will automatically be available in application.js.
 $(document).ready(function(){
 
-	// console.log("inside the charges")
+	// var handler = StripeCheckout.configure({
+	// 	key: 'pk_test_UlUbDYdUkO0qkJ2r1Iw3DYtZ',
+	//   token: function (token) {
+
+	//   	var request = $.post('/charges', {
+	//   		stripeToken: token.id,
+	// 			stripeEmail: token.email,
+	// 			amount: amount,
+	//   	});
+	//   	request.done(function(){
+	//   		alert('Thanks for the cash sucker!');
+	//   	});
+	//   	request.fail(function(){
+	//   		alert('something went wrong, its jacklyns fault')
+	//   	});
+	//   }
+	// });
+
 	var handler = StripeCheckout.configure({
-		key: 'pk_live_mwmgw4amV67menSn4FDsAm6m',
-	    token: function (token) {
-	        $("#stripeToken").val(token.id);
-	        $("#stripeEmail").val(token.email);
-	        $("#myForm").submit();
-	    }
+		Stripe.setPublishableKey('pk_test_UlUbDYdUkO0qkJ2r1Iw3DYtZ');
+
+		// key: 'pk_test_UlUbDYdUkO0qkJ2r1Iw3DYtZ',
+		token: function(token) {
+			$('#stripeToken').val(token.id);
+			$('#stripeEmail').val(token.email);
+			$('#stripe-form').submit();	
+		}
 	});
 
-	$('.customButton').on('click', function (e) {
 
-			var idOfTheFormElements = "#amount_" + e.toElement.dataset.index;
+	$('.stripe-form').on('submit', function (event) {
+		var $form = $(this);
 
-			console.log(idOfTheFormElements);
+		// disable submit button to prevent multiple clicks
+		$form.find('.contribute-btn ').prop('disabled', true);
 
-	    var amount = $(idOfTheFormElements).val() * 100;
-	    console.log(amount);
+		Stripe.card.createToken($form, stripeResponseHandler);
 
-	    var displayAmount = parseFloat(Math.floor($(idOfTheFormElements).val() * 100) / 100).toFixed(2);
+		return false;
 
-	    // Open Checkout with further options
-	    handler.open({
-	        name: 'Honeymoon Fund',
-	        description: 'help fund happiness',
-	        amount: amount
-	    });
-	    e.preventDefault();
+		event.preventDefault();
+
+		if (response.error) {
+			$form.find('.payment-errors').text(response.error.message);
+			$form.find('.customButton').prop('disabled', false);
+		}
+		else {
+			var token = response.id;
+			$form.append($('<input type="hidden" name="stripeToken" />').val(token));
+			$form.get(0).submit();
+		}
+		
+		// Open Checkout with further options
+    handler.open({
+      name: 'Honeymoon Fund',
+      description: 'help fund happiness',
+      amount: amount,
+    });
+    event.preventDefault();
+	});
+
+	// // Close Checkout on page navigation
+	$(window).on('popstate', function () {
+	  handler.close();
 	});
 })
 
-	// Close Checkout on page navigation
-$(window).on('popstate', function () {
-    handler.close();
-});
+

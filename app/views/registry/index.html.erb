@@ -28,34 +28,36 @@
 
 	<div class="container">
 		<div class="row">
-				<% index = 0 %>
-				<% @items.each do |item| %>
-			<div class="col span-12-d debug gift-border">
-				<div class="col span-3-d debug photo-style">
-					<%= image_tag(item.image, :alt => "flights", height: 130, width: 140) %>
+			<% @items.each do |item| %>
+				<div class="col span-12-d debug gift-border">
+					<div class="col span-3-d debug photo-style">
+						<%= image_tag(item.image, :alt => "flights", height: 130, width: 140) %>
+					</div>
+
+					<div class="col span-6-d debug">
+						<h2 class="registry-title"><%= item.title %></h2>
+						<p class="description"><%= item.description %></p>
+					</div>
+
+					<div class="col span-3-d debug">
+						<p>possible contribution</p>
+						<p class="cost">$ <%= item.remaining_amount %>.00 left to go!</p>
+
+						<form id="stripe-form" action="/charges" method="POST">
+							<input type="hidden" name="stripeToken" id="stripeToken" />
+							<input type="hidden" name="stripeEmail" id="stripeEmail" />
+							<div>
+								<span class="dollar-sign">$</span>
+								<input type="text" class="zeros" placeholder=".00" name="amount" id="amount" />
+							</div>
+							<div>
+								<input type="submit" class="contribute-btn customButton" value="contribute">		
+							</div>
+						</form>
+
+					</div>
 				</div>
-
-				<div class="col span-6-d debug">
-					<h2 class="registry-title"><%= item.title %></h2>
-					<p class="description"><%= item.description %></p>
-				</div>
-
-				<div class="col span-3-d debug">
-					<p id="cost-txt">possible contribution</p>
-					<p class="cost">$ <%= item.remaining_amount %>.00 left to go!</p>
-
-					<form id="myForm" action="/charges" method="POST">
-						<span id="dollar-sign">$</span><input type="text" class="zeros" placeholder=".00" id= "amount_<%= index %>" name="amount_<%= index %>" />
-						<input type="hidden" id="stripeToken" name="stripeToken" />
-						<input type="hidden" id="stripeEmail" name="stripeEmail" />
-					</form>
-
-						<input type="button" class="contribute-btn customButton" value="contribute" data-index="<%= index %>">		
-				</div>
-				<% index += 1 %>
-			</div>
-
-				<% end %>
+			<% end %>
 		</div>
 	</div>
 

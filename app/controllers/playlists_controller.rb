@@ -15,9 +15,4 @@ class PlaylistsController < ApplicationController
   	redirect_to root_path
   end
 
-
-  # private
-  # def playlist_params
-  # 	params.require(:playlist).permit(:song)
-  # end
 end

@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
+# use dotenv for config variables
+gem 'dotenv-rails', :groups => [:development, :test]
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -25,6 +27,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+#use env variables before loading stripe
+# gem 'dotenv-rails', :require => 'dotenv/rails-now'
 
 # Use for donations and contributions
 gem 'stripe'
