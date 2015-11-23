@@ -2,65 +2,31 @@
 // All this logic will automatically be available in application.js.
 $(document).ready(function(){
 
-	// var handler = StripeCheckout.configure({
-	// 	key: 'pk_test_UlUbDYdUkO0qkJ2r1Iw3DYtZ',
-	//   token: function (token) {
+		// get the key that identifies me as the Stripe customer
 
-	//   	var request = $.post('/charges', {
-	//   		stripeToken: token.id,
-	// 			stripeEmail: token.email,
-	// 			amount: amount,
-	//   	});
-	//   	request.done(function(){
-	//   		alert('Thanks for the cash sucker!');
-	//   	});
-	//   	request.fail(function(){
-	//   		alert('something went wrong, its jacklyns fault')
-	//   	});
-	//   }
-	// });
+		// grab the amount from the form and set that to the Stripe amount
 
-	var handler = StripeCheckout.configure({
-		Stripe.setPublishableKey('pk_test_UlUbDYdUkO0qkJ2r1Iw3DYtZ');
+		// set the token to send to Stripe server
+		// 	stripeToken
+		// 	stripeEmail
+		// 	amount
 
-		// key: 'pk_test_UlUbDYdUkO0qkJ2r1Iw3DYtZ',
-		token: function(token) {
-			$('#stripeToken').val(token.id);
-			$('#stripeEmail').val(token.email);
-			$('#stripe-form').submit();	
-		}
-	});
+		// open Checkout
+		// 		set params to send to Stripe server
 
-
-	$('.stripe-form').on('submit', function (event) {
-		var $form = $(this);
-
-		// disable submit button to prevent multiple clicks
-		$form.find('.contribute-btn ').prop('disabled', true);
-
-		Stripe.card.createToken($form, stripeResponseHandler);
-
-		return false;
-
-		event.preventDefault();
-
-		if (response.error) {
-			$form.find('.payment-errors').text(response.error.message);
-			$form.find('.customButton').prop('disabled', false);
-		}
-		else {
-			var token = response.id;
-			$form.append($('<input type="hidden" name="stripeToken" />').val(token));
-			$form.get(0).submit();
-		}
+		// close Checkout
 		
+	var handler = StripeCheckout.configure({
+
+		};
+
 		// Open Checkout with further options
     handler.open({
       name: 'Honeymoon Fund',
       description: 'help fund happiness',
       amount: amount,
     });
-    event.preventDefault();
+    // event.preventDefault();
 	});
 
 	// // Close Checkout on page navigation
