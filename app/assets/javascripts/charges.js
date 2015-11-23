@@ -15,7 +15,7 @@ $(document).ready(function(){
 		// 		set params to send to Stripe server
 
 		// close Checkout
-		
+
 	var handler = StripeCheckout.configure({
 
 		};
