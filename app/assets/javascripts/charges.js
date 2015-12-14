@@ -2,23 +2,25 @@
 // All this logic will automatically be available in application.js.
 $(document).ready(function(){
 
-		// get the key that identifies me as the Stripe customer
-
-		// grab the amount from the form and set that to the Stripe amount
-
-		// set the token to send to Stripe server
-		// 	stripeToken
-		// 	stripeEmail
-		// 	amount
-
-		// open Checkout
-		// 		set params to send to Stripe server
-
-		// close Checkout
-
 	var handler = StripeCheckout.configure({
+		key: '',
+		token: function(token) {
+			$('#stripeToken').val(token.id);
+			$('#stripeEmail').val(token.email);
+			$('#stripe-form').submit();
+		}
+	});
 
-		};
+	$('.stripeButton').on('click', function(event){
+		var centsFromStripeForm= "#amount" + event.toElement.dataset.index;
+
+		console.log(centsFromStripeForm);
+
+		var amount = $(centsFromStripeForm).val() * 100;
+		console.log(amount);
+		var displayAmount = parseFloat(Math.floor($(idOfTheFormElements).val() * 100) / 100).toFixed(2);
+	});
+	console.log(displayAmount);
 
 		// Open Checkout with further options
     handler.open({
@@ -26,7 +28,7 @@ $(document).ready(function(){
       description: 'help fund happiness',
       amount: amount,
     });
-    // event.preventDefault();
+    event.preventDefault();
 	});
 
 	// // Close Checkout on page navigation

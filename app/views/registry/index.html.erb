@@ -43,16 +43,16 @@
 						<p>possible contribution</p>
 						<p class="cost">$ <%= item.remaining_amount %>.00 left to go!</p>
 
-						<form id="stripe-form" action=" " method="POST">
+						<form id="stripe-form" action="/charges" method="POST">
 							<input type="hidden" name="stripeToken" id="stripeToken" />
 							<input type="hidden" name="stripeEmail" id="stripeEmail" />
 							<div>
-								<span class="dollar-sign">$</span>
-								<input type="number" min="1.00" class="zeros" placeholder=".00" data-stripe="amount" />
+								<span id="dollar-sign">$</span><input type="text" class="zeros" placeholder=".00" id= "amount_<%= index %>" name="amount_<%= index %>" />
 							</div>
 							<div>
-								<input type="submit" class="contribute-btn customButton" value="contribute">		
+								<input type="button" class="contribute-btn customButton stripeButton" value="contribute" data-index="<%= index %>">		
 							</div>
+							<% index +=1 %>
 						</form>
 
 					</div>
@@ -60,4 +60,3 @@
 			<% end %>
 		</div>
 	</div>
-
