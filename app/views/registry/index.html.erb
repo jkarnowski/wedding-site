@@ -28,6 +28,7 @@
 
 	<div class="container">
 		<div class="row">
+			<% index = 0 %>
 			<% @items.each do |item| %>
 				<div class="col span-12-d debug gift-border">
 					<div class="col span-3-d debug photo-style">
@@ -44,18 +45,18 @@
 						<p class="cost">$ <%= item.remaining_amount %>.00 left to go!</p>
 
 						<form id="stripe-form" action="/charges" method="POST">
-							<% index = 0 %>
 							<input type="hidden" name="stripeToken" id="stripeToken" />
 							<input type="hidden" name="stripeEmail" id="stripeEmail" />
 							<div>
-								<span id="dollar-sign">$</span><input type="text" class="zeros" placeholder=".00" class= "amount_<%= index %>" name="amount_<%= index %>" />
+								<span id="dollar-sign">$</span><input type="text" class="zeros input-index" placeholder=".00" />
+								<p>INDEX: <%= index %></p>
 							</div>
+
 							<div>
+								<% index += 1 %>
 								<input type="button" class="contribute-btn customButton stripeButton" value="contribute" data-index="<%= index %>">		
 							</div>
-							<% index +=1 %>
 						</form>
-
 					</div>
 				</div>
 			<% end %>

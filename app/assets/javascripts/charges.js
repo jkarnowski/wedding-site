@@ -18,11 +18,21 @@ $(document).ready(function(){
 
   $('.stripeButton').on('click', function(event) {
 
-  	var centsFromStripeForm= ".amount_" + event.toElement.dataset.index;
-  	console.log(centsFromStripeForm);
+  	var indexOfInput = $(this).data("index");
+  	console.log("index Of Input:");
+  	console.log(indexOfInput);
 
-  	var amount = $(centsFromStripeForm).val() * 100;
+  	// var centsToDollars = parseFloat(Math.floor($(indexOfInput).val() * 100) / 100).toFixed(2);
+  	// ONLY WORKS RIGHT NOW FOR FIRST INPUT FIELD
+  	var centsToDollars = $('.input-index').val();
+  	console.log("cents to dollars")
+  	console.log(centsToDollars);
+
+  	var amount = $(centsToDollars).val() * 100;
+
+  	console.log("AMOUNT TO SEND TO STRIPE:");
   	console.log(amount);
+
     // Open Checkout with further options
     handler.open({
       name: 'Jaclyn Karnowski & Pablo Perez',
