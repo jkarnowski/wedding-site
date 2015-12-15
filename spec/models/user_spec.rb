@@ -1,26 +1,28 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-	let(:user) { FactoryGirl.create(:user) }
+
+	let(:user) { FactoryGirl.build(:user) }
 
 	describe "a user" do
+		
 		it "has a valid factory" do
 			expect(user).to be_valid
 		end
 	end
 
 	describe "user model validations" do
-		let(:valid_user) { FactoryGirl.create(:valid_user) }
-		let(:invalid_name) { FactoryGirl.create(:invalid_name, name: nil) }
-		let(:invalid_email) { FactoryGirl.create(:invalid_email, email: nil) }
+		let(:valid_user) { FactoryGirl.create(:user) }
+		let(:invalid_name) { FactoryGirl.create(:user, name: nil) }
+		let(:invalid_email) { FactoryGirl.create(:user, email: nil) }
 
 		context "when the user is valid" do
 			it "is a user with a unique name" do
-				expect(user.name).to validate_uniqueness_of(:user)
+				expect(valid_user).to be true
 			end
 
 			it "is a user with a unique email" do
-				expect(user.email).to validate_uniqueness_of(:user)
+				expect(valid_user.email).to validate_uniqueness_of(:valid_user)
 			end
 		end
 

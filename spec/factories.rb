@@ -3,8 +3,8 @@ FactoryGirl.define do
 	factory :user do
 		name "Jaclyn Perez"
 		email "jac@test.com"
+		password "testing123"
 		rsvp_response "yes"
-		password "1234abc"
 	end
 
 	factory :playlist do
