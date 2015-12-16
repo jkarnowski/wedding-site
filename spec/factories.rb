@@ -14,7 +14,7 @@ FactoryGirl.define do
 
 	factory :registry do
 		title "Airline Tickets"
-		string "Fly us to the beach"
+		description "Fly us to the beach"
 		total_cost 300
 		desired_amount 30
 		multiplier 10

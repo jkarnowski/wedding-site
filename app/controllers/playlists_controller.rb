@@ -7,9 +7,6 @@ class PlaylistsController < ApplicationController
   	@playlist = Playlist.new
   end
 
-  def show
-  end
-
   def create
   	Playlist.create(user_params)
   	redirect_to root_path

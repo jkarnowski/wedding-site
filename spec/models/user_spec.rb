@@ -17,8 +17,8 @@ RSpec.describe User, type: :model do
 		it { should_not accept_values_for(:email, nil) }
 		it { should_not accept_values_for(:password, nil) }
 
-		it { should accept_values_for(:name, "Ashley") }
-		it { should accept_values_for(:email, "ashley@testing.com") }
-		it { should accept_values_for(:password, "testing123") }
+		it { should accept_values_for(:name, user.name) }
+		it { should accept_values_for(:email, user.email) }
+		it { should accept_values_for(:password, user.password) }
 	end
 end

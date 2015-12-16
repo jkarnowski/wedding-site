@@ -15,6 +15,6 @@ RSpec.describe Playlist, type: :model do
 
 		it { should_not accept_values_for(:song, nil) }
 
-		it { should accept_values_for(:song, "Dance Dance Dance") }
+		it { should accept_values_for(:song, playlist.song) }
 	end
 end
