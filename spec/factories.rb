@@ -21,4 +21,10 @@ FactoryGirl.define do
 		remaining_amount 300
 		image "http://pics.filmaffinity.com/Factory_Girl-779993240-large.jpg"
 	end
+
+	factory :rsvp do
+		name "Norma Perez"
+		email "momi@chile.com"
+		rsvp_response "yes"
+	end
 end
