@@ -32,23 +32,33 @@ RSpec.describe PlaylistsController, type: :controller do
     let(:invalid_playlist) {FactoryGirl.create(:playlist, song: nil) }
 
     context "with valid attributes" do 
+
       it "saves a new playlist with songs to the database" do
+        expect {
+          post :create,
+          playlist: playlist
+          }.to change(Playlist, :playlist).by(1)
+        end
 
-        get :create
-        expect(response).to have_http_status(:success)
+        it "redirects to the home page" do
+        end
       end
 
-      it "redirects to the home page" do
+      context "with invalid attributes" do 
+        it "does not save a playlist to the database" do
+          expect {
+            post :create,
+            playlist: invalid_playlist
+            }.to_not change(Playlist, :playlist).by(1)
+          end
+
+          it "re-renders the :new form" do
+            expect {
+              post :create,
+              playlist: invalid_playlist
+            }
+            expect(response).to render_template :new
+          end
+        end
       end
     end
-
-    context "with invalid attributes" do 
-      it "does not save a playlist to the database" do 
-      end
-
-      it "re-renders the :new form" do 
-      end
-    end
-  end
-
-end
