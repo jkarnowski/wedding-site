@@ -15,9 +15,9 @@ Registry.create(title: "Cooking Class", description: "Pablo says my rice could u
 Registry.create(title: "Sightseeing", description: "From gardens to temples to hot springs and islands, there is so much to explore!", total_cost: 200, remaining_amount: 200, desired_amount: 50, multiplier: 4, image: "items/horyu-temple.jpg")
 Registry.create(title: "Wild Card", description: "Inspire us to do something unique on our first big international trip as husband and wife.", total_cost: 250, remaining_amount: 250, desired_amount: 25, multiplier: 10, image: "items/cherry-b.jpg")
 
-User.create(name: "Jaclyn Karnowski", email: "jaclyn@wedding.com", rsvp_response: 'yes')
-User.create(name: "Ashley Karnowski", email: "ashleyk@wedding.com", rsvp_response: 'yes')
-User.create(name: "Pablo Perez", email: "pabloperezpp@hotmail.com", rsvp_response: 'yes')
+User.create(name: "Jaclyn Karnowski", email: "jaclyn@wedding.com", password: "test123")
+User.create(name: "Ashley Karnowski", email: "ashleyk@wedding.com", password: "123test")
+User.create(name: "Pablo Perez", email: "pabloperezpp@hotmail.com", password: "husband2015")
 
 
 Playlist.create(song: "Lean On", user_id: 1)
@@ -26,7 +26,10 @@ Playlist.create(song: "Sweet Escape", user_id: 2)
 Playlist.create(song: "Cool For the Summer", user_id: 3)
 Playlist.create(song: "Right Here, Right Now", user_id: 3)
 
-
+Rsvp.create(name: "Jaclyn Karnowski", email: "jaclyn@gmail.com", rsvp_response: "yes", number_of_guests: 2)
+Rsvp.create(name: "Pablo Perez", email: "pablo@husband.com", rsvp_response: "yes", number_of_guests: 2)
+Rsvp.create(name: "Alexis Sanchez", email: "soccer@stud.com", rsvp_response: "no", number_of_guests: 0)
+Rsvp.create(name: "Grandma", email: "grandma@love.com", rsvp_response: "yes", number_of_guests: 1)
 
 
 

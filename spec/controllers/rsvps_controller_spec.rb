@@ -10,10 +10,6 @@ RSpec.describe RsvpsController, type: :controller do
       get :index
       expect(response).to have_http_status(:success)
     end
-
-    it "returns a collection of users" do
-      
-    end
   end
 
   describe "GET #new" do
