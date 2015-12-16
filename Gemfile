@@ -50,6 +50,7 @@ group :development, :test do
   gem "factory_girl_rails"
   gem 'better_errors'
   gem 'rspec-rails'
+  gem "accept_values_for"
   gem 'capybara'
   gem 'binding_of_caller'
   gem "selenium-webdriver"
