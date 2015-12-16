@@ -1,12 +1,14 @@
 class RsvpsController < ApplicationController
   def index
-  	@users = User.all
+  	# @users = User.all
   end
 
   def new
-  	@user = User.new
+  	@rsvp = Rsvp.new
   end
 
+# RSVP might belong to a user
+# RSVP is NOT a user
   def create
   	User.create(user_params)
 
