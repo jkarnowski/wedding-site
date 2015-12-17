@@ -9,7 +9,7 @@ class ChargesController < ApplicationController
 
 	def create
 
-		p @amount = params[:amount]
+		@amount = params[:amount].to_i * 100
 
 		customer = Stripe::Customer.create(
 			:email => params[:StripeEmail],
@@ -28,5 +28,4 @@ class ChargesController < ApplicationController
 		redirect_to new_charge_path
 		flash[:notice] = "Transaction did not go through.Please try again."
 	end
-
 end

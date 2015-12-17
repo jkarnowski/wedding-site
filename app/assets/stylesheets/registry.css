@@ -21,6 +21,16 @@
 	font-size: 18px;
 }
 
+#dollar-sign {
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+.input-index {
+	margin-right: 50%;
+	margin-left: 50%;
+}
+
 .registry-box-align {
 	margin-left: 80px;
 }

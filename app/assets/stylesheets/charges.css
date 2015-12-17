@@ -3,11 +3,6 @@
   They will automatically be included in application.css.
 */
 
-#dollar-sign {
-	font-size: 25px;
-	margin-right: 10px;
-}
-
 .contribute-btn {
 	background-color: #D35400;
 	border: none;
@@ -15,7 +10,7 @@
 	color: white;
 	padding: 5px;
 	font-family: 'Cabin', sans-serif;
-	margin-left: 25px;
+	margin-left: 25%;
 	margin-top: 10px;
 	width: 70%;
 	letter-spacing: 1.2px;

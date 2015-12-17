@@ -21,10 +21,10 @@ $(document).ready(function(){
   	console.log(indexOfInput);
 
   	var cents = $('.input-index').val();
-    var centsTest = $('input[name="amount_' + indexOfInput + ']')
-    console.log(centsTest);
-    var centsTest2 = $('input[name="amount_' + indexOfInput + ']').val();
-    console.log(centsTest2);  
+    // var centsTest = $('input[name="amount_' + indexOfInput + ']')
+    // console.log(centsTest);
+    // var centsTest2 = $('input[name="amount_' + indexOfInput + ']').val();
+    // console.log(centsTest2);  
     var centsToDollars = parseFloat(Math.floor(cents * 100)).toFixed(2);
     // ONLY WORKS RIGHT NOW FOR FIRST INPUT FIELD
   	console.log("cents to dollars")
