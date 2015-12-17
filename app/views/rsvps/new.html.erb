@@ -6,11 +6,11 @@
 			<h2 class="heading-shadow">RSVP</h2>
 		</div>
 	</div>
-</div> <!-- close-container -->
+</div>
 
 <div class="col span-12-d">
 	<div class="rsvp-form">
-		<%= form_for :user, :url =>url_for(controller: 'rsvps', action: 'create'), :html => {:method => :post} do |f| %>
+		<%= form_for :rsvp, :url =>url_for(controller: 'rsvps', action: 'create'), :html => {:method => :post} do |f| %>
 		
 		<p class="space">
 			<%= f.text_field :name, placeholder: 'your name(s)', class: 'input-txt' %>
@@ -29,14 +29,8 @@
 			<%= label_tag(:rsvp_response, "Regretfully, have to stay anchored.", class: 'rsvp-button-txt') %>
 		</p>
 
-		<p class="space">
-			<%= f.fields_for :playlists do |f| %>
-			<%= f.text_field :song,  placeholder: 'what song do you love to dance to?', class: 'song-input' %>
-		</p>
-
 		<%= f.submit "Submit", class: "submit-button" %>
 
 		<% end  %>
 	</div>
-		<% end  %>
 </div>

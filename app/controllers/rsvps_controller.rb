@@ -1,26 +1,27 @@
 class RsvpsController < ApplicationController
+  
   def index
+    @rsvps = Rsvp.all
   end
 
   def new
   	@rsvp = Rsvp.new
   end
 
-# RSVP might belong to a user
-# RSVP is NOT a user
   def create
-  	User.create(user_params)
-
+  	@rsvp = Rsvp.create(rsvp_params)
     flash[:notice] = "We got your RSVP"
-  	redirect_to root_path
+
+    redirect_to rsvps_path(@rsvp)
   end
 
   def show
+    @rsvp = Rsvp.find(params[:id])
   end
 
   private
-	def user_params
-		params.require(:user).permit(:name, :email, :rsvp_response, :playlists_attributes => :song)
+	def rsvp_params
+		params.require(:rsvp).permit(:email, :rsvp_response, :playlists_attributes => :song)
 	end
 
 end
