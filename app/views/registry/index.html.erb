@@ -48,8 +48,7 @@
 							<input type="hidden" name="stripeToken" id="stripeToken" />
 							<input type="hidden" name="stripeEmail" id="stripeEmail" />
 							<div>
-								<span id="dollar-sign">$</span><input type="text" class="zeros input-index" placeholder=".00" />
-								<p>INDEX: <%= index %></p>
+								<span id="dollar-sign">$</span><input type="text" class="zeros input-index" name="amount_<%= index %>" placeholder=".00" />
 							</div>
 
 							<div>

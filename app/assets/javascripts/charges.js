@@ -2,8 +2,6 @@
 // All this logic will automatically be available in application.js.
 $(document).ready(function(){
 
-	console.log("READY!");
-
   var handler = StripeCheckout.configure({
     key: 'pk_test_UlUbDYdUkO0qkJ2r1Iw3DYtZ',
     locale: 'auto',
@@ -11,8 +9,8 @@ $(document).ready(function(){
       // Use the token to create the charge with a server-side script.
       // You can access the token ID with `token.id`
       $('#stripeToken').val(token.id);
-			$('#stripeEmail').val(token.email);
-			$('#stripe-form').submit();
+      $('#stripeEmail').val(token.email);
+      $('#stripe-form').submit();
     }
   });
 
@@ -22,22 +20,21 @@ $(document).ready(function(){
   	console.log("index Of Input:");
   	console.log(indexOfInput);
 
-  	// var centsToDollars = parseFloat(Math.floor($(indexOfInput).val() * 100) / 100).toFixed(2);
-  	// ONLY WORKS RIGHT NOW FOR FIRST INPUT FIELD
-  	var centsToDollars = $('.input-index').val();
+  	var cents = $('.input-index').val();
+    var centsTest = $('input[name="amount_' + indexOfInput + ']')
+    console.log(centsTest);
+    var centsTest2 = $('input[name="amount_' + indexOfInput + ']').val();
+    console.log(centsTest2);  
+    var centsToDollars = parseFloat(Math.floor(cents * 100)).toFixed(2);
+    // ONLY WORKS RIGHT NOW FOR FIRST INPUT FIELD
   	console.log("cents to dollars")
   	console.log(centsToDollars);
-
-  	var amount = $(centsToDollars).val() * 100;
-
-  	console.log("AMOUNT TO SEND TO STRIPE:");
-  	console.log(amount);
 
     // Open Checkout with further options
     handler.open({
       name: 'Jaclyn Karnowski & Pablo Perez',
       description: 'Honeymoon Fund',
-      amount: amount
+      amount: centsToDollars
     });
     event.preventDefault();
   });
@@ -47,5 +44,4 @@ $(document).ready(function(){
     handler.close();
   });
 });
-
 
