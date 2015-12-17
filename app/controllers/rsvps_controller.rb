@@ -12,7 +12,9 @@ class RsvpsController < ApplicationController
   	@rsvp = Rsvp.create(rsvp_params)
     flash[:notice] = "We got your RSVP"
 
-    redirect_to rsvps_path(@rsvp)
+    # want to redirect to SHOW page and SHOW the RSVP that was sent it
+    #WHY isn't it saving to the database now?
+    redirect_to root_path
   end
 
   def show

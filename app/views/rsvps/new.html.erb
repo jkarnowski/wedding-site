@@ -20,6 +20,10 @@
 			<%= f.text_field :email, placeholder: 'email', class: 'input-txt' %>
 		</p>
 
+		<p class="space">
+			<%= f.text_field :number_of_guests, placeholder: 'how many?', class: 'input-txt' %>
+		</p>
+
 		<p>
 			<%= radio_button_tag(:rsvp_response, "Yes") %>
 			<%= label_tag(:rsvp_response, "Let's Set Sail! I/We will be there!", class: 'rsvp-button-txt') %>
