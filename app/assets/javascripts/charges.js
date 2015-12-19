@@ -22,16 +22,16 @@ $(document).ready(function(){
   	console.log("index Of Input:");
   	console.log(indexOfInput);
 
-  	// var centsToDollars = parseFloat(Math.floor($(indexOfInput).val() * 100) / 100).toFixed(2);
-  	// ONLY WORKS RIGHT NOW FOR FIRST INPUT FIELD
   	var centsToDollars = $('.input-index').val();
-  	console.log("cents to dollars")
-  	console.log(centsToDollars);
-
-  	var amount = $(centsToDollars).val() * 100;
+    console.log("cents to dollars")
+    console.log(centsToDollars);
+    // var centsToDollars = parseFloat(Math.floor($(centsToDollars) * 100) / 100).toFixed(2);
+  	// console.log("AFTER PARSING cents to dollars")
+  	// console.log(centsToDollars);
 
   	console.log("AMOUNT TO SEND TO STRIPE:");
-  	console.log(amount);
+    var amount = (centsToDollars * 100);
+    // console.log(amount);
 
     // Open Checkout with further options
     handler.open({
