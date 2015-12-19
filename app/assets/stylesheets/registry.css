@@ -26,17 +26,22 @@
 	margin-right: 50%;
 }
 
+.item-title {
+	width: 50%;
+	margin: 20px auto;
+}
+
 .contribute-btn {
 	background-color: #D35400;
 	border: none;
-	font-size: 18px;
+	font-size: 30px;
 	color: white;
-	padding: 5px;
+	padding: 10px;
 	font-family: 'Cabin', sans-serif;
-	margin-left: 25%;
-	margin-top: 10px;
-	width: 70%;
-	letter-spacing: 1.2px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	width: 95%;
+	letter-spacing: 1.3px;
 }
 
 .input-index {
@@ -69,9 +74,11 @@
 }
 
 .zeros {
-	font-size: 14px;
-	padding: 5px;
+	font-size: 22px;
 	text-align: center;
+	padding: 2px;
+	margin: 10px 55px 5px 250px;
+	width: 50%;
 }
 
 .gift-border {

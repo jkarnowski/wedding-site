@@ -16,13 +16,10 @@ $(document).ready(function(){
 
   $('.stripeButton').on('click', function(event) {
 
-  	var indexOfInput = $(this).data("index");
-  	console.log("index Of Input:");
-  	console.log(indexOfInput);
+  	// var indexOfInput = $(this).data("index");
+  	// console.log("index Of Input:");
+  	// console.log(indexOfInput);
 
-    // var centsTest = $('input[name="amount_' + indexOfInput + ']')
-    // console.log(centsTest);
-    // ONLY WORKS RIGHT NOW FOR FIRST INPUT FIELD
   	var centsToDollars = $('.input-index').val();
     console.log("cents to dollars")
     console.log(centsToDollars);
@@ -30,15 +27,14 @@ $(document).ready(function(){
   	// console.log("AFTER PARSING cents to dollars")
   	// console.log(centsToDollars);
 
-  	console.log("AMOUNT TO SEND TO STRIPE:");
     var amount = (centsToDollars * 100);
-    // console.log(amount);
-    
+    console.log(amount);
+
     // Open Checkout with further options
     handler.open({
       name: 'Jaclyn Karnowski & Pablo Perez',
       description: 'Honeymoon Fund',
-      amount: centsToDollars
+      amount: amount
     });
     event.preventDefault();
   });

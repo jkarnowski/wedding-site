@@ -26,40 +26,24 @@
 	</div>
 </div>
 
-<div class="container">
+<div class="container gift-border">
+	<div class="row debug">
+		<h2>Want to contribute to our honeymoon fund?</h2>
+	</div>
 	<div class="row debug">
 		<div class="col span-12-d debug">
 			<form id="stripe-form" action="/charges" method="POST">
 				<input type="hidden" name="stripeToken" id="stripeToken" />
 				<input type="hidden" name="stripeEmail" id="stripeEmail" />
-				<input type="text" class="zeros input-index" name="amount" placeholder=".00" />
-				<input type="button" class="contribute-btn customButton stripeButton" value="contribute">		
+				
+				<select class="form-control item-title">
+				<% @items.each do |item| %>
+					<option><%= item.title %>: <%= number_to_currency(item.desired_amount) %> * <%= item.multiplier %></option>
+  			<% end %>
+  			</select>
+				<div class="col span-8-d debug"><input type="text" class="zeros input-index" name="amount" placeholder=".00" /></div>
+				<div class="col span-4-d debug"><input type="button" class="contribute-btn stripeButton" value="contribute"></div>
 			</form>
 		</div>
 	</div> <!-- row -->
-
-	<div class="row debug">
-		<h2>Another ROW</h2>
-	</div>
-
-	<div class="row debug">
-		<% @items.each do |item| %>
-		<div class="col span-12-d debug gift-border">
-			<div class="col span-3-d debug photo-style">
-				<%= image_tag(item.image, :alt => "flights", height: 130, width: 140) %>
-			</div>
-
-			<div class="col span-6-d debug">
-				<h2 class="registry-title"><%= item.title %></h2>
-				<p class="description"><%= item.description %></p>
-			</div>
-
-			<div class="col span-3-d debug">
-				<p>possible contribution</p>
-				<p class="cost"><%= number_to_currency(item.remaining_amount) %>left to go!</p>
-				<p class="cost"> Desired Amount: <%= number_to_currency(item.desired_amount) %> * <%= number_to_currency(item.multiplier) %></p>
-			</div>
-			<% end %>
-		</div>
-	</div>
 </div>
