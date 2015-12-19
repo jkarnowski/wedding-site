@@ -22,16 +22,17 @@ $(document).ready(function(){
   	console.log("index Of Input:");
   	console.log(indexOfInput);
 
+    // allows for grabbing the FIRST form
   	var centsToDollars = $('.input-index').val();
-    console.log("cents to dollars")
-    console.log(centsToDollars);
-    // var centsToDollars = parseFloat(Math.floor($(centsToDollars) * 100) / 100).toFixed(2);
-  	// console.log("AFTER PARSING cents to dollars")
-  	// console.log(centsToDollars);
+    // console.log("cents to dollars")
+    // console.log(centsToDollars);
+    console.log($('input[name=amount_' + indexOfInput + ']'));
+    var testToDollars = $('input[name=amount_' + indexOfInput + ']').val();
+    console.log(testToDollars);
 
   	console.log("AMOUNT TO SEND TO STRIPE:");
-    var amount = (centsToDollars * 100);
-    // console.log(amount);
+    var amount = (testToDollars * 100);
+    console.log(amount);
 
     // Open Checkout with further options
     handler.open({
@@ -47,5 +48,4 @@ $(document).ready(function(){
     handler.close();
   });
 });
-
 
