@@ -27,23 +27,22 @@
 </div>
 
 <div class="container">
-	<div class="row">
-<div class="col span-12-d debug">
-	<form id="stripe-form" action="/charges" method="POST">
-		<input type="hidden" name="stripeToken" id="stripeToken" />
-		<input type="hidden" name="stripeEmail" id="stripeEmail" />
-		<span id="dollar-sign">$</span><input type="text" class="zeros input-index" name="amount" placeholder=".00" />
-		<div>
-			<input type="button" class="contribute-btn customButton stripeButton" value="contribute">		
+	<div class="row debug">
+		<div class="col span-12-d debug">
+			<form id="stripe-form" action="/charges" method="POST">
+				<input type="hidden" name="stripeToken" id="stripeToken" />
+				<input type="hidden" name="stripeEmail" id="stripeEmail" />
+				<input type="text" class="zeros input-index" name="amount" placeholder=".00" />
+				<input type="button" class="contribute-btn customButton stripeButton" value="contribute">		
+			</form>
 		</div>
-	</form>
-</div>
-</div>
-</div>
+	</div> <!-- row -->
 
-<div class="container">
-	<div class="row">
-		<% index = 0 %>
+	<div class="row debug">
+		<h2>Another ROW</h2>
+	</div>
+
+	<div class="row debug">
 		<% @items.each do |item| %>
 		<div class="col span-12-d debug gift-border">
 			<div class="col span-3-d debug photo-style">
@@ -57,16 +56,10 @@
 
 			<div class="col span-3-d debug">
 				<p>possible contribution</p>
-				<p class="cost">$ <%= item.remaining_amount %>.00 left to go!</p>
-						<form id="stripe-form" action="/charges" method="POST">
-							<input type="hidden" name="stripeToken" id="stripeToken" />
-							<input type="hidden" name="stripeEmail" id="stripeEmail" />
-							<div>
-								<span id="dollar-sign">$</span><input type="text" class="zeros input-index" placeholder=".00" id="amount_<%= index %>" />
-								<p>INDEX: <%= index %></p>
-							</div>
+				<p class="cost"><%= number_to_currency(item.remaining_amount) %>left to go!</p>
+				<p class="cost"> Desired Amount: <%= number_to_currency(item.desired_amount) %> * <%= number_to_currency(item.multiplier) %></p>
 			</div>
+			<% end %>
 		</div>
-		<% end %>
 	</div>
 </div>

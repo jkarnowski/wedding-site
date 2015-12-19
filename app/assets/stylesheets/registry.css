@@ -23,7 +23,20 @@
 
 #dollar-sign {
 	font-size: 20px;
-	margin-right: 10px;
+	margin-right: 50%;
+}
+
+.contribute-btn {
+	background-color: #D35400;
+	border: none;
+	font-size: 18px;
+	color: white;
+	padding: 5px;
+	font-family: 'Cabin', sans-serif;
+	margin-left: 25%;
+	margin-top: 10px;
+	width: 70%;
+	letter-spacing: 1.2px;
 }
 
 .input-index {

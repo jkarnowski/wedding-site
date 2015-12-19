@@ -2,16 +2,3 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
-
-.contribute-btn {
-	background-color: #D35400;
-	border: none;
-	font-size: 18px;
-	color: white;
-	padding: 5px;
-	font-family: 'Cabin', sans-serif;
-	margin-left: 25%;
-	margin-top: 10px;
-	width: 70%;
-	letter-spacing: 1.2px;
-}
