@@ -20,16 +20,20 @@ $(document).ready(function(){
   	console.log("index Of Input:");
   	console.log(indexOfInput);
 
-  	var cents = $('.input-index').val();
     // var centsTest = $('input[name="amount_' + indexOfInput + ']')
     // console.log(centsTest);
-    // var centsTest2 = $('input[name="amount_' + indexOfInput + ']').val();
-    // console.log(centsTest2);  
-    var centsToDollars = parseFloat(Math.floor(cents * 100)).toFixed(2);
     // ONLY WORKS RIGHT NOW FOR FIRST INPUT FIELD
-  	console.log("cents to dollars")
-  	console.log(centsToDollars);
+  	var centsToDollars = $('.input-index').val();
+    console.log("cents to dollars")
+    console.log(centsToDollars);
+    // var centsToDollars = parseFloat(Math.floor($(centsToDollars) * 100) / 100).toFixed(2);
+  	// console.log("AFTER PARSING cents to dollars")
+  	// console.log(centsToDollars);
 
+  	console.log("AMOUNT TO SEND TO STRIPE:");
+    var amount = (centsToDollars * 100);
+    // console.log(amount);
+    
     // Open Checkout with further options
     handler.open({
       name: 'Jaclyn Karnowski & Pablo Perez',
