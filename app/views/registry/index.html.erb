@@ -9,56 +9,59 @@
 	</div> <!-- row div -->
 </div>
 
-		<div class="row friendship">
-		<div class="col span-8-d debug gifts-story">
-			<p>We have been asked what we want/need as a newly married couple. Simple - your friendship and love.</p>
-			<p>Your presence at our wedding and on the dance floor is what we want most of all.</p>
-			<p>But if you insist, we would also love an incredible honeymoon adventure to Japan. We want to see and do as much as we can on a 10-day trip.</p>
-			<p>Here's how it works. Just pick an item you would like to contribute to, click and make an online payment directly to us. You'll be asked to leave your name and message and please do, we want to thank you for keeping us well fed in Tokyo.</p>
-		</div>
+<div class="row friendship">
+	<div class="col span-8-d debug gifts-story">
+		<p>We have been asked what we want/need as a newly married couple. Simple - your friendship and love.</p>
+		<p>Your presence at our wedding and on the dance floor is what we want most of all.</p>
+		<p>But if you insist, we would also love an incredible honeymoon adventure to Japan. We want to see and do as much as we can on a 10-day trip.</p>
+		<p>Here's how it works. Just pick an item you would like to contribute to, click and make an online payment directly to us. You'll be asked to leave your name and message and please do, we want to thank you for keeping us well fed in Tokyo.</p>
+	</div>
 
-		<div class="col span-4-d debug">
-			<h3>the utensils and home decor?</h3>
-			<div class="registry-box-align">
+	<div class="col span-4-d debug">
+		<h3>the utensils and home decor?</h3>
+		<div class="registry-box-align">
 			<a href="http://www.etsy.com/registry/NzQ4NzEwN3w4Njk1ODcw/" title="See our registry on Etsy"><%= image_tag("etsy-registry.jpeg", :alt => 'etsy-registry', height: 100, width: 110) %></a>
 			<a href="http://www.amazon.com/registry/wedding/CM4P9915GL6J" title="Registry on Amazon"><%= image_tag("amazonRegistry.png", :alt => "amazon registry", height: 90, width: 160) %></a>
 		</div>
+	</div>
+</div>
+
+<div class="container gift-border">
+	<div class="row debug">
+		<h2>Want to contribute to our honeymoon fund?</h2>
+	</div>
+	<div class="row debug">
+		<div class="col span-12-d debug">
+			<form id="stripe-form" action="/charges" method="POST">
+				<input type="hidden" name="stripeToken" id="stripeToken" />
+				<input type="hidden" name="stripeEmail" id="stripeEmail" />
+				
+				<select class="form-control item-title">
+				<% @items.each do |item| %>
+					<option><%= item.title %>: <%= number_to_currency(item.desired_amount) %> * <%= item.multiplier %></option>
+  			<% end %>
+  			</select>
+				<div class="col span-8-d debug"><input type="text" class="zeros input-index" name="amount" placeholder=".00" /></div>
+				<div class="col span-4-d debug"><input type="button" class="contribute-btn stripeButton" value="contribute"></div>
+			</form>
+		</div>
+	</div> <!-- row -->
+</div>
+
+<div class="container">
+	<div class="row debug items-topmargin">
+		<div class="col span-12-d debug">
+		<% @items.each do |item| %>
+		<div class="col span-4-d debug items-outline">
+			<%= image_tag(item.image, :alt => "honeymoon activity", height: 130, width: 140, :class => "style_image") %>
+			<h3 class="registry-title"><%= item.title %></h3>
+			<p class="description"><%= item.description %></p>
+			<p class="cost">Desired Amount: <%= number_to_currency(item.desired_amount) %>* <%= item.multiplier %></p>
+		</div>
+		<% end %>
 		</div>
 	</div>
+</div>
 
-	<div class="container">
-		<div class="row">
-			<% index = 0 %>
-			<% @items.each do |item| %>
-				<div class="col span-12-d debug gift-border">
-					<div class="col span-3-d debug photo-style">
-						<%= image_tag(item.image, :alt => "flights", height: 130, width: 140) %>
-					</div>
 
-					<div class="col span-6-d debug">
-						<h2 class="registry-title"><%= item.title %></h2>
-						<p class="description"><%= item.description %></p>
-					</div>
-
-					<div class="col span-3-d debug">
-						<p>possible contribution</p>
-						<p class="cost">$ <%= item.remaining_amount %>.00 left to go!</p>
-
-						<form id="stripe-form" action="/charges" method="POST">
-							<input type="hidden" name="stripeToken" id="stripeToken" />
-							<input type="hidden" name="stripeEmail" id="stripeEmail" />
-							<div>
-								<span id="dollar-sign">$</span><input type="text" class="zeros input-index" placeholder=".00" id="amount_<%= index %>" />
-								<p>INDEX: <%= index %></p>
-							</div>
-
-							<div>
-								<% index += 1 %>
-								<input type="button" class="contribute-btn customButton stripeButton" value="contribute" data-index="<%= index %>">		
-							</div>
-						</form>
-					</div>
-				</div>
-			<% end %>
-		</div>
-	</div>
+</div>

@@ -2,8 +2,6 @@
 // All this logic will automatically be available in application.js.
 $(document).ready(function(){
 
-	console.log("READY!");
-
   var handler = StripeCheckout.configure({
     key: 'pk_test_UlUbDYdUkO0qkJ2r1Iw3DYtZ',
     locale: 'auto',
@@ -11,16 +9,16 @@ $(document).ready(function(){
       // Use the token to create the charge with a server-side script.
       // You can access the token ID with `token.id`
       $('#stripeToken').val(token.id);
-			$('#stripeEmail').val(token.email);
-			$('#stripe-form').submit();
+      $('#stripeEmail').val(token.email);
+      $('#stripe-form').submit();
     }
   });
 
   $('.stripeButton').on('click', function(event) {
 
-  	var indexOfInput = $(this).data("index");
-  	console.log("index Of Input:");
-  	console.log(indexOfInput);
+  	// var indexOfInput = $(this).data("index");
+  	// console.log("index Of Input:");
+  	// console.log(indexOfInput);
 
   	var centsToDollars = $('.input-index').val();
     console.log("cents to dollars")
@@ -29,9 +27,8 @@ $(document).ready(function(){
   	// console.log("AFTER PARSING cents to dollars")
   	// console.log(centsToDollars);
 
-  	console.log("AMOUNT TO SEND TO STRIPE:");
     var amount = (centsToDollars * 100);
-    // console.log(amount);
+    console.log(amount);
 
     // Open Checkout with further options
     handler.open({
@@ -47,5 +44,4 @@ $(document).ready(function(){
     handler.close();
   });
 });
-
 

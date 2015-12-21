@@ -2,21 +2,3 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
-
-#dollar-sign {
-	font-size: 25px;
-	margin-right: 10px;
-}
-
-.contribute-btn {
-	background-color: #D35400;
-	border: none;
-	font-size: 18px;
-	color: white;
-	padding: 5px;
-	font-family: 'Cabin', sans-serif;
-	margin-left: 25px;
-	margin-top: 10px;
-	width: 70%;
-	letter-spacing: 1.2px;
-}
