@@ -35,22 +35,17 @@
 			<form id="stripe-form" action="/charges" method="POST">
 				<input type="hidden" name="stripeToken" id="stripeToken" />
 				<input type="hidden" name="stripeEmail" id="stripeEmail" />
-				
-				<select class="form-control item-title">
-				<% @items.each do |item| %>
-					<option><%= item.title %>: <%= number_to_currency(item.desired_amount) %> * <%= item.multiplier %></option>
-  			<% end %>
-  			</select>
 				<div class="col span-8-d debug"><input type="text" class="zeros input-index" name="amount" placeholder=".00" /></div>
 				<div class="col span-4-d debug"><input type="button" class="contribute-btn stripeButton" value="contribute"></div>
 			</form>
 		</div>
-	</div> <!-- row -->
+	</div>
 </div>
 
 <div class="container">
 	<div class="row debug items-topmargin">
 		<div class="col span-12-d debug">
+			<h3>How we plan to travel</h3>
 		<% @items.each do |item| %>
 		<div class="col span-4-d debug items-outline">
 			<%= image_tag(item.image, :alt => "honeymoon activity", height: 130, width: 140, :class => "style_image") %>
