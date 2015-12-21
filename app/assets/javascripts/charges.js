@@ -24,17 +24,14 @@ $(document).ready(function(){
   	var centsToDollars = $('.input-index').val();
     // console.log("cents to dollars")
     // console.log(centsToDollars);
-    console.log($('input[name=amount_' + indexOfInput + ']'));
-    var testToDollars = $('input[name=amount_' + indexOfInput + ']').val();
-    console.log(testToDollars);
 
     var amount = (centsToDollars * 100);
-    console.log(amount);
+    // console.log(amount);
 
     // Open Checkout with further options
     handler.open({
-      name: 'Jaclyn Karnowski & Pablo Perez',
-      description: 'Honeymoon Fund',
+      name: 'Honeymoon Fund',
+      description: 'Jaclyn + Pablo',
       amount: amount
     });
     event.preventDefault();
