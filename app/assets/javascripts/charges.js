@@ -2,9 +2,10 @@
 // All this logic will automatically be available in application.js.
 $(document).ready(function(){
 
+  var key = Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'));
+
   var handler = StripeCheckout.configure({
-    key: '#{Rails.configuration.stripe[:publishable_key]}',
-    // key: '#{Rails.configuration.stripe[:publishable_key]}'
+    key: key,
     locale: 'auto',
     token: function(token) {
       // Use the token to create the charge with a server-side script.
