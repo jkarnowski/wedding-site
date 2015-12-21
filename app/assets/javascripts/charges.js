@@ -16,24 +16,17 @@ $(document).ready(function(){
 
   $('.stripeButton').on('click', function(event) {
 
-  	// var indexOfInput = $(this).data("index");
-  	// console.log("index Of Input:");
-  	// console.log(indexOfInput);
-
   	var centsToDollars = $('.input-index').val();
     console.log("cents to dollars")
-    console.log(centsToDollars);
-    // var centsToDollars = parseFloat(Math.floor($(centsToDollars) * 100) / 100).toFixed(2);
-  	// console.log("AFTER PARSING cents to dollars")
-  	// console.log(centsToDollars);
+    // console.log(centsToDollars);
 
     var amount = (centsToDollars * 100);
-    console.log(amount);
+    // console.log(amount);
 
     // Open Checkout with further options
     handler.open({
-      name: 'Jaclyn Karnowski & Pablo Perez',
-      description: 'Honeymoon Fund',
+      name: 'Honeymoon Fund',
+      description: 'Jaclyn + Pablo',
       amount: amount
     });
     event.preventDefault();
