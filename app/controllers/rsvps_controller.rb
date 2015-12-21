@@ -12,8 +12,6 @@ class RsvpsController < ApplicationController
   	@rsvp = Rsvp.create(rsvp_params)
     flash[:notice] = "We got your RSVP"
 
-    # want to redirect to SHOW page and SHOW the RSVP that was sent it
-    #WHY isn't it saving to the database now?
     redirect_to root_path
   end
 
@@ -23,7 +21,7 @@ class RsvpsController < ApplicationController
 
   private
 	def rsvp_params
-		params.require(:rsvp).permit(:email, :rsvp_response, :playlists_attributes => :song)
+		params.require(:rsvp).permit(:email, :rsvp_response, playlists_attributes: [:song])
 	end
 
 end

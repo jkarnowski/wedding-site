@@ -34,8 +34,8 @@
 		</p>
 
 		<p class="space">
-			<%= f.fields_for :playlists do |ff| %>
-			<%= ff.text_field :song,  placeholder: 'what song do you love to dance to?', class: 'song-input' %>
+			<%= f.fields_for :playlists do |playlist| %>
+			<%= playlist.text_field :song,  placeholder: 'what song do you love to dance to?', class: 'song-input' %>
 		</p>
 
 		<%= f.submit "Submit", class: "submit-button" %>
