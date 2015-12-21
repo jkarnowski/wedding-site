@@ -2,10 +2,10 @@
 // All this logic will automatically be available in application.js.
 $(document).ready(function(){
 
-  Stripe.setPublishableKey('pk_live_4J2WWgveZENkVDkZxefrTOh0');
+  Stripe.setPublishableKey('pk_test_UlUbDYdUkO0qkJ2r1Iw3DYtZ');
 
   var handler = StripeCheckout.configure({
-    key: 'pk_live_4J2WWgveZENkVDkZxefrTOh0',
+    key: 'pk_test_UlUbDYdUkO0qkJ2r1Iw3DYtZ',
     locale: 'auto',
     token: function(token) {
       // Use the token to create the charge with a server-side script.
