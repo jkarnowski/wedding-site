@@ -13,8 +13,8 @@
 	<div class="col span-8-d debug gifts-story">
 		<p>We have been asked what we want/need as a newly married couple. Simple - your friendship and love.</p>
 		<p>Your presence at our wedding and on the dance floor is what we want most of all.</p>
-		<p>But if you insist, we would also love an incredible honeymoon adventure to Japan. We want to see and do as much as we can on a 10-day trip.</p>
-		<p>Here's how it works. Just pick an item you would like to contribute to, click and make an online payment directly to us. You'll be asked to leave your name and message and please do, we want to thank you for keeping us well fed in Tokyo.</p>
+		<p>But if you insist, we would also love an incredible honeymoon adventure to Japan. We want to see and do as much as we can on a 10-day trip. Check out all the things we want to do!</p>
+		<p>Here's how it works. Just make an online contribution directly to us by typing in the gift amount in the box below. Click contribute and an online payment form will pop up. We'll receive 100% of your gift. We want to thank you for keeping us well fed in Tokyo.</p>
 	</div>
 
 	<div class="col span-4-d debug">
@@ -29,13 +29,14 @@
 <div class="container gift-border">
 	<div class="row debug">
 		<h2>Want to contribute to our honeymoon fund?</h2>
+		<p>contribution is in USD</p>
 	</div>
 	<div class="row debug">
 		<div class="col span-12-d debug">
 			<form id="stripe-form" action="/charges" method="POST">
 				<input type="hidden" name="stripeToken" id="stripeToken" />
 				<input type="hidden" name="stripeEmail" id="stripeEmail" />
-				<div class="col span-8-d debug"><input type="text" class="zeros input-index" name="amount" placeholder=".00" /></div>
+				<div class="col span-8-d debug"><input type="text" class="zeros input-index" name="amount" placeholder="ie 50.00" /></div>
 				<div class="col span-4-d debug"><input type="button" class="contribute-btn stripeButton" value="contribute"></div>
 			</form>
 		</div>
