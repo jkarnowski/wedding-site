@@ -7,10 +7,13 @@
 	margin-bottom: 20px;
 }
 
-.description {
-	font-family: 'Cabin', sans-serif;
-	font-size: 18px;
-	padding: 1em;
+.registry-box-align {
+	margin-left: 80px;
+}
+
+.registry-title {
+	padding: 2px;
+	color:#D35400;
 }
 
 .gifts-story {
@@ -21,34 +24,55 @@
 	font-size: 18px;
 }
 
-.registry-box-align {
-	margin-left: 80px;
+.input-index {
+	margin-right: 50%;
+	margin-left: 50%;
 }
 
-.registry-title {
-	padding: 5px;
+#dollar-sign {
+	font-size: 20px;
+	margin-right: 50%;
 }
 
-.photo-style {
+.contribute-btn {
+	background-color: #D35400;
+	border: none;
+	font-size: 30px;
+	color: white;
 	padding: 10px;
+	font-family: 'Cabin', sans-serif;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	width: 95%;
+	letter-spacing: 1.3px;
 }
 
 .cost {
-	font-size: 22px;
-	margin-top: 5px; 
+	font-size: 18px;
+	margin-top: 3px; 
 }
 
-#cost-txt {
-	font-size: 13px;
-	margin-right: 15px;
-	margin-top: 5px;
-	font-style: italic;
+.items-topmargin {
+	margin-top: 20px;
+}
+
+.item-title {
+	width: 50%;
+	margin: 20px auto;
+}
+
+.description {
+	font-family: 'Cabin', sans-serif;
+	font-size: 14px;
+	padding: 1em;
 }
 
 .zeros {
-	font-size: 14px;
-	padding: 5px;
+	font-size: 22px;
 	text-align: center;
+	padding: 2px;
+	margin: 10px 55px 5px 250px;
+	width: 50%;
 }
 
 .gift-border {
@@ -57,9 +81,18 @@
 	margin-top: 30px;
 }
 
+.items-outline {
+	outline: 1px solid gray;
+	height: 370px;
+}
 
 .registry-header {
 	text-align: center;
 	margin-right: 40px;
 	padding: 1em;
+}
+
+.style_image {
+	margin: 10px 60px;
+	padding: 2px;
 }
