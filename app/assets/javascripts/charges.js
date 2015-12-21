@@ -2,6 +2,8 @@
 // All this logic will automatically be available in application.js.
 $(document).ready(function(){
 
+  Stripe.setPublishableKey('pk_live_4J2WWgveZENkVDkZxefrTOh0');
+
   var handler = StripeCheckout.configure({
     key: 'pk_live_4J2WWgveZENkVDkZxefrTOh0',
     locale: 'auto',
@@ -16,17 +18,9 @@ $(document).ready(function(){
 
   $('.stripeButton').on('click', function(event) {
 
-  	// var indexOfInput = $(this).data("index");
-  	// console.log("index Of Input:");
-  	// console.log(indexOfInput);
-
-    // allows for grabbing the FIRST form
+    // allows for grabbing from the FIRST form
   	var centsToDollars = $('.input-index').val();
-    // console.log("cents to dollars")
-    // console.log(centsToDollars);
-
     var amount = (centsToDollars * 100);
-    // console.log(amount);
 
     // Open Checkout with further options
     handler.open({
