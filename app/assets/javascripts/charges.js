@@ -3,7 +3,7 @@
 $(document).ready(function(){
 
   var handler = StripeCheckout.configure({
-    key: Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content')),
+    key: 'pk_live_4J2WWgveZENkVDkZxefrTOh0',
     locale: 'auto',
     token: function(token) {
       // Use the token to create the charge with a server-side script.
