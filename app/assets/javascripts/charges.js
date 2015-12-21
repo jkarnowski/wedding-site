@@ -3,7 +3,7 @@
 $(document).ready(function(){
 
   var handler = StripeCheckout.configure({
-    key: 'pk_test_UlUbDYdUkO0qkJ2r1Iw3DYtZ',
+    key: '#{Rails.configuration.stripe[:publishable_key]}',
     // key: '#{Rails.configuration.stripe[:publishable_key]}'
     locale: 'auto',
     token: function(token) {
