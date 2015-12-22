@@ -10,9 +10,6 @@ class RsvpsController < ApplicationController
 
   def create
   	@rsvp = Rsvp.create(rsvp_params)
-    flash[:notice] = "We got your RSVP"
-
-    redirect_to root_path
   end
 
   def show
@@ -21,9 +18,7 @@ class RsvpsController < ApplicationController
 
   private
 	def rsvp_params
-		params.require(:rsvp).permit(:email, :rsvp_response, playlists_attributes: [:song])
+		params.require(:rsvp).permit(:name, :email, :rsvp_response, :number_of_guests, playlists_attributes: [:song])
 	end
 
 end
-
-
