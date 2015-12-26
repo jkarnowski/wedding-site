@@ -5,9 +5,12 @@ Rails.application.routes.draw do
   get 'registry/index'
   get 'story/index'
   get 'where/index'
-  get 'playlists' => 'playlists#index'
+  # get 'playlists' => 'playlists#index'
 
-  resources :rsvps
+  resources :rsvps do 
+    resources :playlists
+  end
+
   resources :charges
 
   # The priority is based upon order of creation: first created -> highest priority.

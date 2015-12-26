@@ -8,8 +8,6 @@ class PlaylistsController < ApplicationController
   end
 
   def create
-  	Playlist.create(user_params)
-  	redirect_to root_path
   end
 
 end

@@ -26,9 +26,7 @@ Playlist.create(song: "Sweet Escape", user_id: 2)
 Playlist.create(song: "Cool For the Summer", user_id: 3)
 Playlist.create(song: "Right Here, Right Now", user_id: 3)
 
-Rsvp.create(name: "Jaclyn Karnowski", email: "jaclyn@gmail.com", rsvp_response: "yes", number_of_guests: 2)
-Rsvp.create(name: "Pablo Perez", email: "pablo@husband.com", rsvp_response: "yes", number_of_guests: 2)
-Rsvp.create(name: "Alexis Sanchez", email: "soccer@stud.com", rsvp_response: "no", number_of_guests: 0)
+Rsvp.create(name: "Jaclyn Karnowski & Pablo Perez", email: "jaclyn@gmail.com", rsvp_response: "yes", number_of_guests: 2)
 Rsvp.create(name: "Grandma", email: "grandma@love.com", rsvp_response: "yes", number_of_guests: 1)
 
 

@@ -9,7 +9,6 @@ class RsvpsController < ApplicationController
   end
 
   def create
-    p params
   	@rsvp = Rsvp.create(rsvp_params)
   end
 

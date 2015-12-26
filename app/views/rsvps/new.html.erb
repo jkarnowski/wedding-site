@@ -25,12 +25,12 @@
 		</p>
 
 		<p>
-			<%= radio_button_tag(:rsvp_response, "Yes") %>
-			<%= label_tag(:rsvp_response, "Let's Set Sail! I/We will be there!", class: 'rsvp-button-txt') %>
+			<%= f.radio_button :rsvp_response, 'yes' %> 
+  		<%= f.label :rsvp_response, "Let's Set Sail! I/We will be there!", :value => 'yes', class: 'rsvp-button-txt' %>
 		</p>
 		<p>
-			<%= radio_button_tag(:rsvp_response, "No") %>
-			<%= label_tag(:rsvp_response, "Regretfully, have to stay anchored.", class: 'rsvp-button-txt') %>
+			<%= f.radio_button :rsvp_response, "No" %>
+			<%= f.label :rsvp_response, "Regretfully, have to stay anchored.", :value => 'no', class: 'rsvp-button-txt' %>
 		</p>
 
 		<p class="space">
