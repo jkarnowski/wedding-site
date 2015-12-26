@@ -12,9 +12,10 @@ class RsvpsController < ApplicationController
   	@rsvp = Rsvp.create(rsvp_params)
   end
 
-  def show
-    @rsvp = Rsvp.find(params[:id])
-  end
+  # def show
+  #   @rsvp = Rsvp.find(params[:id])
+  # end
+
 
   private
 	def rsvp_params

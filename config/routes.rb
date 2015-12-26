@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'registry/index'
   get 'story/index'
   get 'where/index'
-  # get 'playlists' => 'playlists#index'
+  get 'admin/rsvps' => 'rsvps#index'
 
   resources :rsvps do 
     resources :playlists
