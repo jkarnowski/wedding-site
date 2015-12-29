@@ -13,6 +13,6 @@
 /tmp
 stripe.rb
 .env
-database.yml
 secrets.yml
+database.yml
 
