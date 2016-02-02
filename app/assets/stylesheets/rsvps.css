@@ -46,3 +46,9 @@
 	text-align: center;
 	width: 30%;
 }
+
+.error-message {
+	color: #c0392b;
+	font-size: 30px;
+	text-align: center;
+}

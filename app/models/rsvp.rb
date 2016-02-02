@@ -4,6 +4,6 @@ class Rsvp < ActiveRecord::Base
 	accepts_nested_attributes_for :playlist
 
 	validates :email, uniqueness: true
-	validates :rsvp_response, presence: true
+	validates :name, :rsvp_response, :number_of_guests, presence: true
 
 end

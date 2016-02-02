@@ -10,11 +10,14 @@ class RsvpsController < ApplicationController
 
   def create
   	@rsvp = Rsvp.create(rsvp_params)
-  end
 
-  # def show
-  #   @rsvp = Rsvp.find(params[:id])
-  # end
+    if @rsvp.save
+      rsvps_path
+    else
+      flash[:error] = "Oops! Try again. Name, email, number of guests and your response are required."
+      redirect_to :back
+    end
+  end
 
 
   private

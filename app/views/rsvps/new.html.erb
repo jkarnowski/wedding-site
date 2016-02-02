@@ -9,6 +9,9 @@
 </div>
 
 <div class="col span-12-d">
+	<div class="error-message">
+		<%= flash[:error] if flash[:error] %>
+	</div>
 	<div class="rsvp-form">
 		<%= form_for :rsvp, :url =>url_for(controller: 'rsvps', action: 'create'), :html => {:method => :post} do |f| %>
 		
