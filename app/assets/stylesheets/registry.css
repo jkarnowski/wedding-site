@@ -7,8 +7,16 @@
 	margin-bottom: 20px;
 }
 
+.honeymoon-header{
+	width: 100%;
+	margin: 0 auto;
+	background-color: #03C9A9;
+	margin-top: 30px;
+	margin-bottom: 5px;
+}
+
 .registry-box-align {
-	margin-left: 90px;
+	margin-left: 80px;
 }
 
 #etsy-box {
@@ -88,6 +96,8 @@
 
 .items-outline {
 	outline: 1px solid gray;
+	margin-top: 20px;
+	box-shadow: 10px 15px 5px #95a5a6;
 	height: 370px;
 }
 

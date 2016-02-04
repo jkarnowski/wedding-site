@@ -43,19 +43,24 @@
 	</div>
 </div>
 
+<!-- <div class="container"> -->
+<!-- <div class="row debug items-topmargin"> -->
+<div class="row honeymoon-header">
+	<div class="col span-12-d debug">
+		<h1>OUR HONEYMOON TRAVEL PLAN</h1>
+	</div>
+</div>
 <div class="container">
-	<div class="row debug items-topmargin">
-		<div class="col span-12-d debug">
-			<h3>How we plan to travel</h3>
+	<div class="row debug">
 		<% @items.each do |item| %>
 		<div class="col span-4-d debug items-outline">
 			<%= image_tag(item.image, :alt => "honeymoon activity", height: 130, width: 140, :class => "style_image") %>
-			<h3 class="registry-title"><%= item.title %></h3>
+			<h2 class="registry-title"><%= item.title %></h2>
 			<p class="description"><%= item.description %></p>
 			<p class="cost">Desired Amount: <%= number_to_currency(item.desired_amount) %>* <%= item.multiplier %></p>
 		</div>
 		<% end %>
-		</div>
 	</div>
+</div>
 </div>
 </div>
