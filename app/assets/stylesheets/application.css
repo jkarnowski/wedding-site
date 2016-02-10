@@ -254,12 +254,12 @@ nav ul.nav-2 a:hover, a:active {
 
 /**/
 
-#linksss a:link, #linksss a:visited {
+.linksss a:link, .linksss a:visited {
     color: #6BB9F0;
     text-decoration: none;    
 }
 
-#linksss a:hover, #linksss a:active {
+.linksss a:hover, .linksss a:active {
     background-color: transparent;
     text-decoration: none;
     color: #22313F;
